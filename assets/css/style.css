@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap");
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.navbar__logo {
+  height: 40px;
+}
+.navbar__user {
+  color: var(--color-primary);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  height: 35px;
+}
+.navbar__user-icon {
+  background-color: var(--color-gray-light);
+  border-radius: 100%;
+  stroke: var(--color-primary);
+  width: 30px;
+  height: 30px;
+  padding: 1px;
+}
+.navbar__user-title {
+  padding: 0 5px;
+  display: none;
+}
+
+.search-bar {
+  display: none;
+  align-items: center;
+  height: 50px;
+  position: relative;
+}
+.search-bar__icon {
+  margin-left: 5px;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  stroke: var(--color-gray);
+}
+.search-bar__input {
+  background-color: var(--color-gray-light);
+  height: 40px;
+  padding-left: 45px;
+  border-style: none;
+  border-radius: 30px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+}
+.search-bar--mobile {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+}
+.search-bar--mobile input {
+  width: 100%;
+  margin-right: 10px;
+}
+
+.header-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 168px;
+  padding: 16px;
+  color: white;
+}
+.header-post__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.filters-mobile {
+  display: flex;
+  align-items: center;
+}
+.filters-mobile__active-options {
+  align-items: center;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  font-size: 1rem;
+  padding: 0 20px;
+  height: 45px;
+}
+.filters-mobile__active-options-icon {
+  width: 10px;
+  margin-left: 10px;
+}
+.filters-list {
+  width: 100%;
+  padding: 10px 0;
+}
+.filters-list__item {
+  align-items: center;
+  display: none;
+  justify-content: center;
+  height: 40px;
+}
+
+.background-header {
+  position: absolute;
+  width: 100%;
+  height: 260px;
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 60%, rgb(0, 0, 0) 100%), url(../images/header-post.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transform-origin: right left;
+  transform: scale(1.1);
+}
+
+:root {
+  --color-primary:hsl(214, 78%, 53%);
+  --color-gray-light: hsl(0, 0%, 96%);
+  --color-gray: hsl(0, 0%, 64%);
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  width: clamp(340px, 100vw - 20px, 748px);
+  margin: auto;
+  position: relative;
+}
+
+/*# sourceMappingURL=style.css.map */

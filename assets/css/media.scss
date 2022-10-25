@@ -1,0 +1,19 @@
+@use 'source/header';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap');
+
+:root{
+    --color-primary:hsl(214, 78%, 53%);
+    --color-gray-light: hsl(0, 0%, 96%);
+    --color-gray: hsl(0, 0%, 64%);
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.container{
+    width: clamp(340px, calc(100vw - 20px),  748px);
+    margin: auto;
+    position: relative;
+}

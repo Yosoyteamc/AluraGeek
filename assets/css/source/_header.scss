@@ -1,0 +1,116 @@
+@import 'variables';
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    &__logo{
+        height: 40px;
+    }
+    &__user{
+        color: $color-primary;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        height: 35px;
+        &-icon{
+            background-color: $color-gray-light;
+            border-radius: 100%;
+            stroke: $color-primary;
+            width: 30px;
+            height: 30px;
+            padding: 1px;
+        }
+        &-title{
+            padding: 0 5px;
+            display: none;
+        }
+    }
+}
+.search-bar{
+    display: none;
+    align-items: center;
+    height: 50px;
+    position: relative;
+    &__icon{
+        margin-left: 5px;
+        height: 28px;
+        width: 28px;
+        position: absolute;
+        stroke: $color-gray;
+    }
+    &__input{
+        background-color: $color-gray-light;
+        height: 40px;
+        padding-left: 45px;
+        border-style: none;
+        border-radius: 30px;
+        font-family: $font-family;
+        font-size: 1rem;
+    }
+    &--mobile{
+        display: flex;
+        width: 100%;
+        padding: 20px 0;
+        input{
+            width: 100%;
+            margin-right: 10px;
+        }
+    }
+}
+.header-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 168px;
+    padding: 16px;
+    color: white;
+    &__title{
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+        font-weight: 700;
+    }
+}
+.filters{
+    &-mobile{
+        display: flex;
+        align-items: center;
+        &__active-options{
+            align-items: center;
+            border: none;
+            border-radius: 20px;
+            display: flex;
+            font-size: 1rem;
+            padding: 0 20px;
+            height: 45px;
+            &-icon{
+                width: 10px;
+                margin-left: 10px;
+            }
+        }
+    }
+    &-list{
+        width: 100%;
+        padding: 10px 0;
+        &__item{
+            align-items: center;
+            display: none;
+            justify-content: center;
+            height: 40px;
+        }
+    }
+}
+
+.background-header{
+    position: absolute;
+    width: 100%;
+    height: 260px;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%), url(../images/header-post.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transform-origin: right left;
+    transform: scale(1.1);
+}
