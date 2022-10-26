@@ -38,9 +38,6 @@
     justify-content: flex-end;
     padding: 2rem;
     color: white;
-    &:hover{
-        cursor: pointer;
-    }
     &__title{
         font-size: 1.5rem;
         font-weight: 700;
@@ -53,6 +50,7 @@
             color: $color-primary;
             &:hover{
                 text-decoration: underline;
+                cursor: pointer;
             }
         }
     }
