@@ -11,6 +11,7 @@
         padding-left: 20px;
         text-transform: uppercase;
         color: $color-white;
+        position: relative;
         &-all{
             color: $color-secundary;
             text-transform: none;
@@ -55,7 +56,7 @@
             &__price{
                 font-size: .9rem;
                 margin-bottom: 10px;
-                color: $color-gray-light;
+                color: $color-gray-very-light;
             }
             &__access{
                 font-weight: 700;
