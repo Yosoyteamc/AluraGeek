@@ -169,20 +169,20 @@
 .products .product-container .product {
   background-color: var(--color-gray-light);
   border-radius: 20px;
-  margin-right: 30px;
+  margin-right: 10px;
   margin-bottom: 30px;
   padding: 10px;
-  height: 230px;
-  width: 150px;
+  height: 210px;
+  width: 130px;
 }
 .products .product-container .product:hover {
   cursor: pointer;
 }
 .products .product-container .product__img {
   border-radius: 10px;
-  height: 150px;
+  height: 130px;
   object-fit: cover;
-  width: 150px;
+  width: 130px;
 }
 .products .product-container .product__name {
   font-weight: bold;
@@ -207,7 +207,7 @@
   flex-wrap: nowrap !important;
   align-items: center;
   overflow-x: auto;
-  height: 300px;
+  height: 260px;
 }
 
 :root {
@@ -225,7 +225,6 @@ body {
   width: clamp(340px, 100vw - 20px, 748px);
   margin: auto;
   position: relative;
-  border: 1px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */

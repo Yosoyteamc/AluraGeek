@@ -17,19 +17,19 @@
         .product{
             background-color: $color-gray-light;
             border-radius: 20px;
-            margin-right: 30px;
+            margin-right: 10px;
             margin-bottom: 30px;
             padding: 10px;
-            height: 230px;
-            width: 150px;
+            height: 210px;
+            width: 130px;
             &:hover{
                 cursor: pointer;
             }
             &__img{
                 border-radius: 10px;
-                height: 150px;
+                height: 130px;
                 object-fit: cover;
-                width: 150px;
+                width: 130px;
             }
             &__name{
                 font-weight: bold;
@@ -57,5 +57,5 @@
     flex-wrap: nowrap !important;
     align-items: center;
     overflow-x: auto;
-    height: 300px;
+    height: 260px;
 }
