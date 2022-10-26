@@ -4,16 +4,30 @@
     margin: 10px 0;
     &__title{
         align-items: center;
+        justify-content: space-between;
         display: flex;
         font-weight: 700;
         height: 80px;
         padding-left: 20px;
         text-transform: uppercase;
+        &-all{
+            color: $color-primary;
+            text-transform: capitalize;
+            font-size: .9rem;
+            display: flex;
+            align-items: center;
+            svg{
+                width: 20px;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
     }
     .product-container{
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         .product{
             background-color: $color-gray-light;
             border-radius: 20px;

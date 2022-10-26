@@ -155,16 +155,30 @@
 }
 .products__title {
   align-items: center;
+  justify-content: space-between;
   display: flex;
   font-weight: 700;
   height: 80px;
   padding-left: 20px;
   text-transform: uppercase;
 }
+.products__title-all {
+  color: var(--color-primary);
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+.products__title-all svg {
+  width: 20px;
+}
+.products__title-all:hover {
+  cursor: pointer;
+}
 .products .product-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .products .product-container .product {
   background-color: var(--color-gray-light);
