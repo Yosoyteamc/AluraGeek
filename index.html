@@ -38,7 +38,7 @@
                     </svg>
                     Star Wars                      
                 </button>
-                <button class="search-quick-options__option" type="button" onclick="window.location.href = '#'">
+                <button class="search-quick-options__option" type="button" onclick="window.location.href = '#diversos'">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="search-quick-options__option-icon">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                     </svg>
@@ -121,7 +121,19 @@
                     </svg>                      
                 </span>
             </h1>
-            <div class="product-container content-scroller">
+            <div class="product-container">
+                <div class="product" data-id="00">
+                    <img class="product__img" src="./assets/images/diversos.jpg" alt="foto de producto">
+                    <h2 class="product__name">Consola XYZ</h2>
+                    <p class="product__price">$50.000 COP</p>
+                    <span class="product__access">Ver producto</span>
+                </div>
+                <div class="product" data-id="00">
+                    <img class="product__img" src="./assets/images/diversos.jpg" alt="foto de producto">
+                    <h2 class="product__name">Consola XYZ</h2>
+                    <p class="product__price">$50.000 COP</p>
+                    <span class="product__access">Ver producto</span>
+                </div>
                 <div class="product" data-id="00">
                     <img class="product__img" src="./assets/images/diversos.jpg" alt="foto de producto">
                     <h2 class="product__name">Consola XYZ</h2>
@@ -143,5 +155,34 @@
             </div>
         </section>
     </main>
+    <footer class="container">
+        <section class="options">
+            <img class="options__logo" src="./assets/images/logoalurageek-white.svg" alt="logo de AluraGeek">
+            <nav class="navbar-footer">
+                <ul class="navbar-footer__items">
+                    <li class="navbar-footer__item"><a href="">Quienes somos</a></li>
+                    <li class="navbar-footer__item"><a href="">Política de privacidad</a></li>
+                    <li class="navbar-footer__item"><a href="">Programa de fidelidad</a></li>
+                    <li class="navbar-footer__item"><a href="">Nuestras tiendas</a></li>
+                    <li class="navbar-footer__item"><a href="">Quiero ser franquinciado</a></li>
+                    <li class="navbar-footer__item"><a href="">Anuncia aquí</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="contact-me">
+            <h2 class="contact-me__title">Habla con nosotros</h2>
+            <form action="">
+                <label class="contact-me__label" for="name">   <input class="contact-me__input" name="name" id="name" type="text" placeholder="Nombre"></label>
+                <label class="contact-me__label" for="message">
+                    <textarea name="message" id="message" cols="30" rows="10" class="contact-me__input contact-me__input--message" placeholder="Escribe tu mensaje..."></textarea>
+                </label>
+                <button class="contact-me__btn" type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+        <section class="copy">
+           <smart>&copy; Todos los derechos reservados 2022 <br>Desarrollado por <span class="copy-focus">Juan Mosquera</span></smart>
+           <div class="copy-socialmedia"></div>
+        </section>
+    </footer>
 </body>
 </html>
