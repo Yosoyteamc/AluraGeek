@@ -55,6 +55,7 @@
 .content-scroller{
     display: flex;
     flex-wrap: nowrap !important;
+    justify-content: start !important;
     align-items: center;
     overflow-x: auto;
     height: 260px;
