@@ -1,125 +1,78 @@
 @import 'variables';
 
 .navbar{
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 16px 0;
+    padding: 15px 0;
     &__logo{
-        height: 40px;
-    }
-    &__user{
-        color: $color-primary;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        text-decoration: none;
-        height: 35px;
-        &-icon{
-            background-color: $color-gray-light;
-            border-radius: 100%;
-            stroke: $color-primary;
-            width: 25px;
-            height: 25px;
-            &:hover{
-                cursor: pointer;
-            }
-        }
-        &-title{
-            padding: 0 5px;
-            display: none;
+        &-img{
+            height: 2.5rem;
         }
     }
-}
-.search-bar{
-    display: none;
     align-items: center;
-    height: 50px;
-    position: relative;
-    &__icon{
-        margin-right: 15px;
-        height: 28px;
-        width: 28px;
-        position: absolute;
-        right: 0;
-        stroke: $color-gray;
+    &-user-btn{
+        border-style: none;
+        border-radius: 100%;
+        display: flex;
+        height: 1.5rem;
+        justify-content: center;
+        width: 1.5rem;
         &:hover{
             cursor: pointer;
         }
-    }
-    &__input{
-        background-color: $color-gray-light;
-        height: 40px;
-        padding-right: 45px;
-        padding-left: 15px;
-        border-style: none;
-        border-radius: 30px;
-        font-family: $font-family;
-        font-size: 1rem;
-        outline: none;
-    }
-    &--mobile{
-        display: flex;
-        width: 100%;
-        padding: 20px 0;
-        input{
-            width: 100%;
-            margin-right: 10px;
+        &__title{
+            display: none;
+        }
+        &__img{
+            fill: $color-primary;
+            transform: scale(2);
         }
     }
 }
-.header-post{
+.post{
+    height: calc(200px - 4rem);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 168px;
-    padding: 16px;
+    padding: 2rem;
     color: white;
-    font-size: .9rem;
+    &:hover{
+        cursor: pointer;
+    }
     &__title{
         font-size: 1.5rem;
-        margin-bottom: .5rem;
         font-weight: 700;
+        margin-bottom: .3rem;
     }
-}
-.filters{
-    &-mobile{
-        display: flex;
-        align-items: center;
-        &__active-options{
-            align-items: center;
-            border: none;
-            border-radius: 20px;
-            display: flex;
-            font-size: 1rem;
-            padding: 0 20px;
-            height: 42px;
-            &-icon{
-                width: 10px;
-                margin-left: 10px;
+    &__content{
+        font-size: .9rem;
+        &-focus{
+            font-weight: 700;
+            color: $color-primary;
+            &:hover{
+                text-decoration: underline;
             }
         }
     }
-    &-list{
+    &-gallery{
+        background-image: url(../images/header-post-octubre.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        height: 262px;
+        z-index: -2;
+        top: 0;
         width: 100%;
-        padding: 10px 0;
-        &__item{
-            align-items: center;
-            display: none;
-            justify-content: center;
-            height: 40px;
+        transform-origin: center;
+        transform: scale(1.1);
+        &::before{
+            content: " ";
+            z-index: -1;
+            inset: 0;
+            position: absolute;
+            background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%);
         }
     }
-}
-
-.background-header{
-    position: absolute;
-    width: 100%;
-    height: 260px;
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%), url(../images/header-post.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    transform-origin: right left;
-    transform: scale(1.1);
 }

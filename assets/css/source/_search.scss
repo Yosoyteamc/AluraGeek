@@ -1,0 +1,70 @@
+@import 'variables';
+
+.search{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &__input{
+        background-color: $color-gray-light;
+        border-style: none;
+        font-family: $font-family;
+        font-size: .95rem;
+        height: 35px;
+        margin-top: 15px;
+        padding: 2px 10px;
+        width: calc(100% - 30px);
+        outline: none;
+    }
+    &__icon{
+        height: 20px;
+        margin-top: 24px;
+        position: absolute;
+        right: 12px;
+        stroke: $color-gray;
+        stroke-width: 3px;
+    }
+    &-quick-options{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        width: 100%;
+        &__option{
+            align-items: center;
+            border-style: none;
+            display: flex;
+            flex-direction: column;
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: .8rem;
+            justify-content: center;
+            height: 100px;
+            text-transform: uppercase;
+            width: 32%;
+            color: white;
+            &:nth-child(1){
+                background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 48%, rgba(0,0,0,0) 55%, rgba(0,0,0,1) 100%), url(../images/star-wars.jpg);
+                background-size: cover;
+                background-position: top -30px;
+            }
+            &:nth-child(2){
+                background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 48%, rgba(0,0,0,0) 55%, rgba(0,0,0,1) 100%), url(../images/diversos.jpg);
+                background-size: cover;
+                background-position: top -150px;
+            }
+            &:nth-child(3){
+                background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 48%, rgba(0,0,0,0) 55%, rgba(0,0,0,1) 100%), url(../images/consolas.jpg);
+                background-position: top;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &-icon{
+                height: 30px;
+                margin-bottom: .2rem;
+                width: 30px;
+                stroke-width: 2px;
+            }
+        }
+    }
+}
