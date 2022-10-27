@@ -1,2 +1,81 @@
 @import 'variables';
 
+
+footer{
+    background-color: $color-blue;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    &__logo{
+        height: 50px;
+        margin: 30px 0;
+    }
+    .navbar-footer{
+        &__item{
+            margin: 15px 0;
+            text-align: center;
+            a{
+                color: $color-white;
+                text-decoration: none;
+                cursor: pointer;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.contact-me{
+    margin: 10px auto;
+    width: clamp(340px, calc(100vw - 20px),  440px);
+    &__title{
+        color: $color-white;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 20px 0;
+        text-align: center;
+    }
+    &__input{
+        background-color: white;
+        border-style: none;
+        border-radius: 5px;
+        font-family: $font-family;
+        font-size: .95rem;
+        height: 35px;
+        margin-top: 15px;
+        padding: 2px 10px;
+        width: calc(100% - 25px);
+        outline: none;
+        color: $color-gray;
+        font-weight: 500;
+        &--message{
+            padding: 10px 10px;
+            height: 100px;
+            resize: none
+        }
+    }
+    &__btn{
+        @extend .contact-me__input;
+        width: 99%; 
+        background-color: $color-gray;
+        color: $color-white;
+        height: 50px;
+    }
+
+}
+
+.copy{
+    padding: 40px 0;
+    text-align: center;
+    font-size: .8rem;
+    color: $color-white;
+    &-focus{
+        color: $color-gray;
+    }
+}

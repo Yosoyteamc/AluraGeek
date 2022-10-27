@@ -97,31 +97,3 @@
     }
 
 }
-
-.quick-options{
-    display: flex;
-    justify-content: center;
-    &__items{
-        box-sizing: border-box;
-        display: block;
-        margin: 8px 0;
-        overflow-y: hidden;
-        overflow-x: scroll;
-        padding: 5px 0;
-        white-space: nowrap;
-    }
-    &__item{
-        display: inline-block;
-        margin-right: 8px;
-    }
-    &__link{
-        display: block;
-        border-radius: 20px;
-        background-color: $color-blue;
-        color: $color-white;
-        text-decoration: none;
-        text-rendering: optimizeLegibility;
-        font-size: .9rem;
-        padding: 10px;
-    }
-}

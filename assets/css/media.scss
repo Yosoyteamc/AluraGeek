@@ -1,15 +1,15 @@
 @use 'source/header';
-@use 'source/search';
 @use 'source/products';
 @use 'source/footer';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
 
 :root{
-    --color-blue-light: hsl(191, 51%, 54%);
-    --color-blue: hsl(212, 51%, 54%);
+    --color-blue-light: hsl(214, 78%, 70%);
+    --color-blue: hsl(214, 78%, 53%);
     --color-white: hsl(34, 49%, 91%);
     --color-green: hsl(110, 57%, 31%);
     --color-gray:hsl(154, 7%, 19%);
+    --color-gray-light: hsl(40, 16%, 80%);
 }
 
 body{

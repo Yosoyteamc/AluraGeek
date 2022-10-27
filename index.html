@@ -37,18 +37,38 @@
                 </a>
             </div>
         </section>
-        <section class="quick-options">
-            <ul class="quick-options__items">
-                <li class="quick-options__item"><a class="quick-options__link" href="#">Consolas</a></li>
-                <li class="quick-options__item"><a class="quick-options__link" href="#">Diversos</a></li>
-                <li class="quick-options__item"><a class="quick-options__link" href="#">Promociones</a></li>
-                <li class="quick-options__item"><a class="quick-options__link" href="#">Star wars</a></li>
-                <li class="quick-options__item"><a class="quick-options__link" href="#">Video juegos</a></li>
-            </ul>
-        </section>
     </header>
     <main class="container">
         
     </main>
+    <footer>
+        <section class="options container">
+            <img class="options__logo" src="./assets/images/logoalurageek-white.svg" alt="logo de AluraGeek">
+            <nav class="navbar-footer">
+                <ul class="navbar-footer__items">
+                    <li class="navbar-footer__item"><a href="">Quienes somos</a></li>
+                    <li class="navbar-footer__item"><a href="">Política de privacidad</a></li>
+                    <li class="navbar-footer__item"><a href="">Programa de fidelidad</a></li>
+                    <li class="navbar-footer__item"><a href="">Nuestras tiendas</a></li>
+                    <li class="navbar-footer__item"><a href="">Quiero ser franquinciado</a></li>
+                    <li class="navbar-footer__item"><a href="">Anuncia aquí</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="contact-me">
+            <h2 class="contact-me__title">Habla con nosotros</h2>
+            <form action="">
+                <label class="contact-me__label" for="name">   <input class="contact-me__input" name="name" id="name" type="text" placeholder="Nombre"></label>
+                <label class="contact-me__label" for="message">
+                    <textarea name="message" id="message" cols="30" rows="10" class="contact-me__input contact-me__input--message" placeholder="Escribe tu mensaje..."></textarea>
+                </label>
+                <button class="contact-me__btn" type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+        <section class="copy">
+            <smart>&copy; Todos los derechos reservados 2022 <br>Desarrollado por <span class="copy-focus">Juan Mosquera</span></smart>
+            <div class="copy-socialmedia"></div>
+        </section>
+    </footer>
 </body>
 </html>
