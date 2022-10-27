@@ -60,7 +60,7 @@
     width: 100%;
     .post{
         &__media{
-            height: 150px;
+            height: calc(100vw / 3);
             width: clamp(340px, calc(100vw - 20px),  748px);
             border-radius: 10px;
             object-fit: cover;
@@ -74,7 +74,7 @@
                 text-align: center;
             }
             &__title{
-                text-shadow: 1px 1px 7px black;
+                text-shadow: 1px 2px 7px black;
                 font-weight: 900;
                 font-size: 1.3rem;
                 text-transform: uppercase;
@@ -89,6 +89,7 @@
                     margin: 5px auto;
                     padding: 2px 5px;
                     background-color: $color-blue;
+                    border-radius: 3px;
                 }
             }
         }
