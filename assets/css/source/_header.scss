@@ -76,7 +76,7 @@
             &__title{
                 text-shadow: 1px 2px 7px black;
                 font-weight: 900;
-                font-size: 1.3rem;
+                font-size: clamp(1.3rem, 2.5vw, 3rem);
                 text-transform: uppercase;
             }
             &__content{
@@ -97,3 +97,4 @@
     }
 
 }
+
