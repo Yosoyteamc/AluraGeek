@@ -1,1 +1,99 @@
 @import 'variables';
+
+.products{
+    &__title{
+        &-link{
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: $color-gray;
+            font-weight: 300;
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+    }
+    &-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        min-height: 275px;
+        .product{
+            width: 200px;
+            position: relative;
+            height: min-content;
+            &:hover{
+                .product-content__price-before, .product-content__details{
+                    display: block;
+                }
+            }
+            &:nth-child(1){
+                margin-left: 0;
+            }
+            &__mark{
+                position: absolute;
+                right: 8px;
+                top: 5px;
+                width: 20px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            &__preview{
+                border-radius: 10px;
+                object-fit: cover;
+                -webkit-user-select: none;
+                user-select: none;
+                width: 220px;
+                height: 150px;
+            }
+            &-content{
+                padding: 10px;
+                &__price-before{
+                    display: none;
+                    font-weight: 300;
+                    font-size: .8rem;
+                    text-decoration: line-through;
+                }
+                &__price{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 5px 0;
+                    font-size: 1.3rem
+                }
+                &__descount{
+                    font-size: .8rem;
+                    color: $color-green;
+                }
+                &__details{
+                    display: none;
+                    font-weight: 300;
+                    font-size: .8rem;
+                    line-height: 1.2rem;
+                    height: 20px;
+                    overflow: hidden;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .product-content__price-before, .product-content__details{
+                    display: block;
+                }
+            }
+        }
+
+    }
+    &-scroller{
+        display: flex;
+        row-gap: 20px;
+        gap: 20px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        min-height: 275px;
+        flex-wrap: nowrap;
+        .product{
+            margin: 20px;
+            margin-top: 0;
+            margin-left: 0;
+        }
+    }
+}

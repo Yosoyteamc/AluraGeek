@@ -19,7 +19,6 @@
     }
     &-search-form{
         align-items: center;
-        border: 1px solid orangered;
         background-color: $color-white;
         display: flex;
         justify-content: space-between;
@@ -43,6 +42,8 @@
                 background-color: transparent;
                 border: none;
                 outline: none;
+                font-size: 1.1rem;
+                padding-left: 10px;
             }
         }
     }
