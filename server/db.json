@@ -1,0 +1,59 @@
+{ "products": [
+    {
+        "id":"1",
+        "name":"Taza Stormtrooper",
+        "price":45000,
+        "descount":{
+            "porcent":"10%",
+            "priceBefore":50000,
+            "active":true
+        },
+        "category":"Star wars",
+        "belike":false,
+        "cover":"./assets/images/products/mini-head-white.jpg",
+        "description":"Taza de café estilo Stormtrooper, acompaña tus mañanas y tardes de la mano de una cabeza de un soldado de la tropa de asalto del Imperio Galáctico"
+    },
+    {
+        "id":"2",
+        "name":"Dark Blader",
+        "price":42500,
+        "descount":{
+            "porcent":"15%",
+            "priceBefore":50000,
+            "active":true
+        },
+        "category":"Star wars",
+        "belike":false,
+        "cover":"./assets/images/products/mini-head-black.jpg",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
+    },
+    {
+        "id":"3",
+        "name":"Dark Blader",
+        "price":42500,
+        "descount":{
+            "porcent":"15%",
+            "priceBefore":50000,
+            "active":true
+        },
+        "category":"Consola",
+        "belike":false,
+        "cover":"./assets/images/products/mini-head-black.jpg",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
+    },
+    {
+        "id":"4",
+        "name":"Dark Blader",
+        "price":42500,
+        "descount":{
+            "porcent":"15%",
+            "priceBefore":50000,
+            "active":true
+        },
+        "category":"Diverso",
+        "belike":false,
+        "cover":"./assets/images/products/mini-head-black.jpg",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
+    }
+    ]
+}
