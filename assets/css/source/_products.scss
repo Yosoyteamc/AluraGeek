@@ -16,7 +16,8 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        min-height: 275px;
+        min-height: 250px;
+        overflow-y: hidden;
         .product{
             width: 200px;
             position: relative;
@@ -74,7 +75,7 @@
                     overflow: hidden;
                 }
             }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 1025px) {
                 .product-content__price-before, .product-content__details{
                     display: block;
                 }
@@ -88,7 +89,6 @@
         gap: 20px;
         overflow-x: scroll;
         overflow-y: hidden;
-        min-height: 275px;
         flex-wrap: nowrap;
         .product{
             margin: 20px;

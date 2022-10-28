@@ -104,7 +104,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  min-height: 275px;
+  min-height: 250px;
+  overflow-y: hidden;
 }
 .products-container .product {
   width: 200px;
@@ -162,7 +163,7 @@
   height: 20px;
   overflow: hidden;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1025px) {
   .products-container .product .product-content__price-before, .products-container .product .product-content__details {
     display: block;
   }
@@ -173,7 +174,6 @@
   gap: 20px;
   overflow-x: scroll;
   overflow-y: hidden;
-  min-height: 275px;
   flex-wrap: nowrap;
 }
 .products-scroller .product {
