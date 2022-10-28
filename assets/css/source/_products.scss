@@ -15,18 +15,16 @@
     &-container{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         min-height: 250px;
-        overflow-y: hidden;
+        overflow-x: hidden;
         .product{
-            width: 200px;
+            margin: 20px;
+            margin-top: 0;
+            margin-left: 0;
+            width: 150px;
             position: relative;
             height: min-content;
-            &:hover{
-                .product-content__price-before, .product-content__details{
-                    display: block;
-                }
-            }
             &:nth-child(1){
                 margin-left: 0;
             }
@@ -44,13 +42,12 @@
                 object-fit: cover;
                 -webkit-user-select: none;
                 user-select: none;
-                width: 220px;
+                width: 150px;
                 height: 150px;
             }
             &-content{
                 padding: 10px;
                 &__price-before{
-                    display: none;
                     font-weight: 300;
                     font-size: .8rem;
                     text-decoration: line-through;
@@ -67,7 +64,6 @@
                     color: $color-green;
                 }
                 &__details{
-                    display: none;
                     font-weight: 300;
                     font-size: .8rem;
                     line-height: 1.2rem;
@@ -75,22 +71,23 @@
                     overflow: hidden;
                 }
             }
-            @media screen and (max-width: 1025px) {
-                .product-content__price-before, .product-content__details{
-                    display: block;
-                }
-            }
+        }
+        @media screen and (min-width: 1025px) {
+            min-height: 275px;
         }
 
     }
     &-scroller{
         display: flex;
-        row-gap: 20px;
-        gap: 20px;
         overflow-x: scroll;
         overflow-y: hidden;
         flex-wrap: nowrap;
-        .product{
+        @media screen and (min-width: 1025px) {
+            flex-wrap: wrap;
+            overflow-y: hidden !important;
+            overflow-x: hidden !important;
+        }
+        .card-view{
             margin: 20px;
             margin-top: 0;
             margin-left: 0;
