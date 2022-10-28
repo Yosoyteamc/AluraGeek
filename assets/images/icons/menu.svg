@@ -1,1 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11H40" stroke="#4F86C6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 24H40" stroke="#4F86C6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 37H40" stroke="#4F86C6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.6568 29.6568L8 23.9999L13.6568 18.343" stroke="#4F86C6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#2A7AE4;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;}
+</style>
+<path class="st0" d="M4,5.5h16"/>
+<path class="st0" d="M4,12h16"/>
+<path class="st0" d="M4,18.5h16"/>
+<path class="st0" d="M6.8,14.8L4,12l2.8-2.8"/>
+</svg>

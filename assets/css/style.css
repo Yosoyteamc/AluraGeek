@@ -99,6 +99,9 @@
   font-size: 1.2rem;
   margin: 15px 0;
 }
+.products__title-link-img {
+  width: 25px;
+}
 .products-container {
   display: flex;
   flex-wrap: wrap;
@@ -265,7 +268,7 @@ footer {
 :root {
   --color-blue-light: hsl(214, 78%, 70%);
   --color-blue: hsl(214, 78%, 53%);
-  --color-white: hsl(34, 49%, 91%);
+  --color-white: hsl(36, 100%, 98%);
   --color-green: hsl(110, 57%, 31%);
   --color-gray:hsl(0, 0%, 20%);
   --color-gray-light: hsl(40, 16%, 80%);
