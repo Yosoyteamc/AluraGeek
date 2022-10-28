@@ -40,7 +40,6 @@
   background-color: transparent;
   border: none;
   outline: none;
-  font-size: 1.1rem;
   padding-left: 10px;
 }
 .navbar .search-form {
@@ -108,10 +107,10 @@
   overflow-x: hidden;
 }
 .products-container .product {
-  margin: 20px;
+  margin: 15px;
   margin-top: 0;
   margin-left: 0;
-  width: 150px;
+  width: 152px;
   position: relative;
   height: min-content;
 }
@@ -132,8 +131,8 @@
   object-fit: cover;
   -webkit-user-select: none;
   user-select: none;
-  width: 150px;
-  height: 150px;
+  width: 152px;
+  height: 152px;
 }
 .products-container .product-content {
   padding: 10px;

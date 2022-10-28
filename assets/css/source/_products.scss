@@ -19,10 +19,10 @@
         min-height: 250px;
         overflow-x: hidden;
         .product{
-            margin: 20px;
+            margin: 15px;
             margin-top: 0;
             margin-left: 0;
-            width: 150px;
+            width: 152px;
             position: relative;
             height: min-content;
             &:nth-child(1){
@@ -42,8 +42,8 @@
                 object-fit: cover;
                 -webkit-user-select: none;
                 user-select: none;
-                width: 150px;
-                height: 150px;
+                width: 152px;
+                height: 152px;
             }
             &-content{
                 padding: 10px;
