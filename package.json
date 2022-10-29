@@ -2,7 +2,7 @@
   "name": "alurageek",
   "version": "1.0.0",
   "description": "Tienda de videojuegos, consolas y contenido exclusivo de peliculas.",
-  "main": "assets/javascript/index.js",
+  "main": "assets/javascript/controllers/index.controller.js",
   "type": "module",
   "scripts": {
     "start": "node assets/javascript/controllers/index.controller.js",
@@ -26,6 +26,7 @@
     "eslint-plugin-promise": "^6.1.1"
   },
   "dependencies": {
-    "chalk": "^5.1.2"
+    "chalk": "^5.1.2",
+    "uuid": "^9.0.0"
   }
 }
