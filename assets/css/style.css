@@ -285,4 +285,8 @@ body {
   width: clamp(340px, 100vw - 20px, 748px);
 }
 
+.not {
+  visibility: hidden;
+}
+
 /*# sourceMappingURL=style.css.map */
