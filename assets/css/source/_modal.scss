@@ -1,0 +1,97 @@
+@import 'variables';
+
+.modal{
+    &-bg{
+        background: rgba(0, 0, 0, 0.9);
+        color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        transition: all .5s;
+        z-index: 4;
+        &--active{
+            display: none;
+        }
+        .modal{
+            background-color: $color-white;
+            width: clamp(288px,50%,384px);
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -100px;
+            bottom: 0;
+            margin: auto;
+            &__item{
+                margin: 20px;
+                &--close{
+                    position: absolute;
+                    width: 20px;
+                    right: 0;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                &--login{
+                    background-color: $color-blue-light;
+                    padding: 8px;
+                    border-radius: 20px;
+                    width: 130px;
+                    position: absolute;
+                    bottom: 0;
+                    .modal__link{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        color: $color-blue;
+                        font-weight: 500;
+                        img{
+                            width:  15px;
+                            height: 15px;
+                        }
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            &__link{
+                text-decoration: none;
+                text-transform: capitalize;
+                color: $color-gray;
+                font-weight: 300;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.slide-right {
+	-webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(100px);
+              transform: translateX(100px);
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(100px);
+              transform: translateX(100px);
+    }
+  }
+  

@@ -1,10 +1,11 @@
 @use 'source/header';
 @use 'source/products';
 @use 'source/footer';
+@use 'source/modal';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
 
 :root{
-    --color-blue-light: hsl(214, 78%, 70%);
+    --color-blue-light: hsla(0, 0%, 20%, 0.089);
     --color-blue: hsl(214, 78%, 53%);
     --color-white: hsl(36, 100%, 98%);
     --color-green: hsl(110, 57%, 31%);

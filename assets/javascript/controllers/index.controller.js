@@ -6,6 +6,9 @@ const openSearch = document.getElementById('navbar-search-open');
 const closeSearch = document.getElementById('search-form-close');
 const searchArea = document.querySelector('.navbar-search-form');
 const textSearchArea = document.getElementById('search-text');
+const modal = document.querySelector(".modal-bg");
+const openMenu = document.getElementById("navbar-menu");
+const closeMenu = document.querySelector(".modal__item--close");
 
 const searchActive =()=>{
     searchArea.classList.toggle('search-form');
@@ -13,8 +16,14 @@ const searchActive =()=>{
     textSearchArea.value = "";
 }
 
+const openModal = () =>{
+    modal.classList.toggle("modal-bg--active");
+}
+
 openSearch.addEventListener('click',searchActive);
 closeSearch.addEventListener('click',searchActive);
+openMenu.addEventListener("click",openModal);
+closeMenu.addEventListener("click",openModal);
 
 const createSection = (title)=>{
     const id = title.replace(" ","-").toLowerCase();
@@ -74,6 +83,7 @@ clientServices.productList("LOCAL")
         })
     })
     setLike();
+    touchProduct();
 
 })
 
@@ -81,7 +91,18 @@ const setLike = () =>{
     const hearts = document.querySelectorAll("[data-like]");
     hearts.forEach((heart)=>{
         heart.addEventListener("click",()=>{
-             heart.classList.toggle("product__mark--like")
+             heart.classList.toggle("product__mark--like");
+             heart.classList.toggle("scale-up-center");
         });
     })
 }
+
+const touchProduct = () =>{
+    const products = document.querySelectorAll("[data-product]");
+    products.forEach((product)=>{
+        product.addEventListener("click",()=>{
+            log(product.dataset.product);
+        })
+    })
+}
+
