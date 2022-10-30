@@ -72,9 +72,8 @@
 .post-header .post-text__title {
   text-shadow: 1px 2px 7px black;
   font-weight: 900;
-  font-size: clamp(1.3rem, 2.5vw, 3rem);
+  font-size: clamp(1.2rem, 2.5vw, 3rem);
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
 }
 .post-header .post-text__content {
   font-size: 0.9rem;
