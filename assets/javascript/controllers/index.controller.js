@@ -52,7 +52,7 @@ const main = document.querySelector("main");
 const categories = new Set();
 const productList = []
 
-clientServices.productList("REMOTO")
+clientServices.productList("LOCAL")
 .then((data)=>{
     data.forEach(product => {
         categories.add(product.category);

@@ -1,5 +1,7 @@
-const URL = "http://localhost:3000/products";
+import dataJSON from "../../../server/db.local.json" assert {type:"json"}
 const localData = "../../../server/db.local.json";
+const URL = "http://localhost:3000/products";
+
 
 const productList = async(access = "LOCAL") => {
     let data; 
@@ -7,8 +9,8 @@ const productList = async(access = "LOCAL") => {
         if(access==="REMOTO"){data = await fetch(URL)};
         if(access==="LOCAL"){data = await fetch(localData)};
     } catch (error) {
-        console.log("Sin conexión a las bases de datos");
-        data = await fetch(localData)
+        console.log("ERROR: CONECCT TO SERVER LOCAL");
+        return data = dataJSON;
     }
     return await data.json();
 }
