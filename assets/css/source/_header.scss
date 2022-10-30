@@ -88,9 +88,10 @@
                     width: -moz-fit-content;
                     width: fit-content;
                     margin: 5px auto;
-                    padding: 2px 5px;
-                    background-color: $color-blue;
+                    padding: 5px 8px;
+                    background-color: var(--color-blue);
                     border-radius: 3px;
+                    font-weight: 300;
                 }
             }
         }

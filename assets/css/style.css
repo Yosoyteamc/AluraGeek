@@ -85,9 +85,10 @@
   width: -moz-fit-content;
   width: fit-content;
   margin: 5px auto;
-  padding: 2px 5px;
+  padding: 5px 8px;
   background-color: var(--color-blue);
   border-radius: 3px;
+  font-weight: 300;
 }
 
 .products__title-link {
@@ -155,7 +156,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 5px 0;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 .products-container .product-content__descount {
   font-size: 0.7rem;
