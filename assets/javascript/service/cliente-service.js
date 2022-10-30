@@ -7,12 +7,12 @@ const productList = async(access = "LOCAL") => {
     let data; 
     try {
         if(access==="REMOTO"){data = await fetch(URL)};
-        if(access==="LOCAL"){data = await fetch(localData)};
+        if(access==="LOCAL"){data = dataJSON};
     } catch (error) {
         console.log("ERROR: CONECCT TO SERVER LOCAL");
         return data = dataJSON;
     }
-    return await data.json();
+    return data;
 }
 
 export const clientServices = {
