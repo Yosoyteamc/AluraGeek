@@ -147,7 +147,7 @@
 }
 .products-container .product-content__price-before {
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-decoration: line-through;
 }
 .products-container .product-content__price {
@@ -155,10 +155,10 @@
   justify-content: space-between;
   align-items: center;
   margin: 5px 0;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 .products-container .product-content__descount {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--color-green);
 }
 .products-container .product-content__details {

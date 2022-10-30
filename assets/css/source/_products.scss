@@ -57,7 +57,7 @@
                 padding: 10px;
                 &__price-before{
                     font-weight: 300;
-                    font-size: .8rem;
+                    font-size: .7rem;
                     text-decoration: line-through;
                 }
                 &__price{
@@ -65,10 +65,10 @@
                     justify-content: space-between;
                     align-items: center;
                     margin: 5px 0;
-                    font-size: 1.3rem
+                    font-size: 1.1rem
                 }
                 &__descount{
-                    font-size: .8rem;
+                    font-size: .7rem;
                     color: $color-green;
                 }
                 &__details{

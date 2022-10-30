@@ -28,7 +28,7 @@ closeMenu.addEventListener("click",openModal);
 const createSection = (title)=>{
     const id = title.replace(" ","-").toLowerCase();
     let scrollerActive = "products-scroller"
-    if(title === "Consolas"){scrollerActive = ""}
+    if(title !== "Star wars"){scrollerActive = ""}
     const sectionInnerHTML = `
     <section class="products" id="${id}">
         <div class="products__title">
