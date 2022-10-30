@@ -33,27 +33,8 @@
                         cursor: pointer;
                     }
                 }
-                &--login{
-                    background-color: $color-blue-light;
-                    padding: 8px;
-                    border-radius: 20px;
-                    width: 130px;
-                    position: absolute;
-                    bottom: 20px;
-                    .modal__link{
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
-                        color: $color-blue;
-                        font-weight: 500;
-                        img{
-                            width:  15px;
-                            height: 15px;
-                        }
-                        &:hover{
-                            text-decoration: none;
-                        }
-                    }
+                &--title{
+                    color: $color-gray;
                 }
             }
             &__link{
@@ -61,8 +42,14 @@
                 text-transform: capitalize;
                 color: $color-gray;
                 font-weight: 300;
+                display: flex;
+                align-items: center;
                 &:hover{
                     text-decoration: underline;
+                }
+                &-img{
+                    width: 20px;
+                    height: 20px;
                 }
             }
         }

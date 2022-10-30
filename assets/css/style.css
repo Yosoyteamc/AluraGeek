@@ -218,7 +218,6 @@
   }
 }
 footer {
-  position: relative;
   background-color: var(--color-gray);
   padding: 30px 0;
 }
@@ -331,36 +330,23 @@ footer {
 .modal-bg .modal__item--close:hover {
   cursor: pointer;
 }
-.modal-bg .modal__item--login {
-  background-color: var(--color-blue-light);
-  padding: 8px;
-  border-radius: 20px;
-  width: 130px;
-  position: absolute;
-  bottom: 20px;
-}
-.modal-bg .modal__item--login .modal__link {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: var(--color-blue);
-  font-weight: 500;
-}
-.modal-bg .modal__item--login .modal__link img {
-  width: 15px;
-  height: 15px;
-}
-.modal-bg .modal__item--login .modal__link:hover {
-  text-decoration: none;
+.modal-bg .modal__item--title {
+  color: var(--color-gray);
 }
 .modal-bg .modal__link {
   text-decoration: none;
   text-transform: capitalize;
   color: var(--color-gray);
   font-weight: 300;
+  display: flex;
+  align-items: center;
 }
 .modal-bg .modal__link:hover {
   text-decoration: underline;
+}
+.modal-bg .modal__link-img {
+  width: 20px;
+  height: 20px;
 }
 
 .slide-right {
