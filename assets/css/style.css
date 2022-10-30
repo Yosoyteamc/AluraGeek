@@ -218,7 +218,6 @@
   }
 }
 footer {
-  z-index: 5;
   position: relative;
   background-color: var(--color-gray);
   padding: 30px 0;
@@ -338,7 +337,7 @@ footer {
   border-radius: 20px;
   width: 130px;
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
 }
 .modal-bg .modal__item--login .modal__link {
   display: flex;
