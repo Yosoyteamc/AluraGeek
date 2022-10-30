@@ -33,13 +33,13 @@ const createSection = (title)=>{
 }
 
 const createProduct = (product) =>{
-    let like = "alike";
+    let like = "";
     let activeDescount = "";
-    if(product.belike){ like = "like"}
+    if(product.belike){ like = "product__mark--like"}
     if(!product.descount.active){ activeDescount = "not"}
     const productInnerHTML = `
     <div class="product card-view" data-product="${product.id}">
-        <img class="product__mark" src="./assets/images/icons/${like}.svg" alt="icono">
+        <div class="product__mark ${like}" data-like></div>
         <img class="product__preview" src=${product.cover} alt="preview de producto">
         <div class="product-content">
             <span class="product-content__price-before ${activeDescount}">$${product.descount.priceBefore}</span>
@@ -73,7 +73,15 @@ clientServices.productList("LOCAL")
             }
         })
     })
+    setLike();
 
 })
 
-
+const setLike = () =>{
+    const hearts = document.querySelectorAll("[data-like]");
+    hearts.forEach((heart)=>{
+        heart.addEventListener("click",()=>{
+             heart.classList.toggle("product__mark--like")
+        });
+    })
+}
