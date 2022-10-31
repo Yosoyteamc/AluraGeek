@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraGeek</title>
+    <title>Agregar productos</title>
     <link rel="stylesheet" href="./assets/css/vendor/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- <link  rel="icon" href="assets/images/AluraGeek.ico" type="image/ico" /> -->
 </head>
 <body>
     <header class="container">
@@ -14,7 +13,7 @@
             <div class="navbar-menu" id="navbar-menu">
                 <img class="navbar-menu__icon icon" src="./assets/images/icons/menu.svg" alt="icono de menu">
             </div>
-            <a class="navbar-logo" href="#"><img class="navbar-logo__logo" src="./assets/images/logoalurageek.svg" alt="logo de AluraGeek"></a>
+            <a class="navbar-logo" href="/"><img class="navbar-logo__logo" src="./assets/images/logoalurageek.svg" alt="logo de AluraGeek"></a>
             <form action="/" class="navbar-search-form search-form">
                 <button class="search-form__button" type="submit" id="search-button"><img class="search-form__button-icon icon" src="./assets/images/icons/search.svg" alt="icono de búsqueda"></button>
                 <input class="search-form__input" id="search-text" data-search type="text" placeholder="¿Qué deseas buscar?">
@@ -26,18 +25,6 @@
                 <img class="navbar-search__icon icon" src="./assets/images/icons/search.svg" alt="icono de búsqueda">
             </div>
         </nav>
-        <section class="post-header">
-            <picture class="post-picture">
-                <source media="(min-width:530px)" srcset="./assets/images/header-post-x2.jpg">
-                <img class="post__media" src="./assets/images/header-post.jpg" alt="Imagen promocional mensual">
-            </picture>
-            <div class="post-text">
-                <a class="post-text__link" href="#">
-                    <h3 class="post-text__title">AHORRA 33% EN CONSOLAS</h3>
-                    <p class="post-text__content post-text__content--link">VER PRODUCTOS SELECCIONADOS</p>
-                </a>
-            </div>
-        </section>
         <section class="modal-bg modal-bg--active ">
             <ul class="modal slide-right">
                 <li class="modal__item modal__item--close"><img src="./assets/images/icons/close.svg" alt="icono"></li>
@@ -50,13 +37,33 @@
                 <li class="modal__item"><a class="modal__link" href="">Anuncia aquí</a></li>
                 <li class="modal__item modal__item--title">Contacto</li>
                 <li class="modal__item modal__item--login"><a class="modal__link" href="#">Contáctanos</a></li>
-                <li class="modal__item modal__item--title">Administrar</li>
-                <li class="modal__item modal__item--login"><a class="modal__link" href="./login.html">Ingresar<img class="modal__link-img" src="./assets/images/icons/right.svg" alt="icono"></a></li>
+                <li class="modal__item modal__item--title">Inicio</li>
+                <li class="modal__item modal__item--login"><a class="modal__link" href="/">Regresar<img class="modal__link-img" src="./assets/images/icons/right.svg" alt="icono"></a></li>
             </ul>
         </section>
     </header>
     <main class="container">
-       <!--Codigo generador por script-->
+        <div class="add-product">
+            <div class="add-product-container">
+                <h2 class="add-product__title">Agregar nuevo producto</h2>
+                <label class="add-product__label" for="cover">URL de cover:
+                    <input class="add-product__input" name="cover" type="text" placeholder="Ingrese el URL del cover">
+                </label>
+                <label class="add-product__label" for="category">Categoria
+                    <input class="add-product__input" name="category" type="text" placeholder="Ej: Consolas, Star wars, Diversos, etc">
+                </label>
+                <label class="add-product__label" for="name">Nombre del producto
+                    <input class="add-product__input" name="name" type="text" placeholder="Escriba el nombre del porducto">
+                </label>
+                <label class="add-product__label" for="category">Precio del producto
+                    <input class="add-product__input" name="category" type="text" placeholder="$xxx.xxx COP">
+                </label>
+                <label class="add-product__label" for="description">Descripción del producto
+                    <textarea class="add-product__input" name="description" cols="30" rows="10" placeholder="Escriba la descripción del producto"></textarea>
+                </label>
+                <input class="add-product__input add-product__button" id="button-add" type="button" value="Agregar">
+            </div>
+        </div>
     </main>
     <footer>
         <section class="container foot-expand">
@@ -94,7 +101,6 @@
         </section>
     </footer>
 </body>
-<script src="./assets/javascript/controllers/header.controller.js" type="module"></script>
-<script src="./assets/javascript/controllers/index.controller.js" type="module"></script>
+<script src="./assets/javascript/controllers/header.controller.js"></script>
+<script src="./assets/javascript/controllers/login.controller.js"></script>
 </html>
-
