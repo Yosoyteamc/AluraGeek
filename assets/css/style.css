@@ -390,7 +390,7 @@ footer {
   max-width: 400px;
 }
 .login-container .login__title {
-  margin: 25px 0;
+  margin-bottom: 25px;
   text-align: center;
   font-weight: 700;
 }
