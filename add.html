@@ -52,19 +52,34 @@
                 <label class="add-product__label" for="cover">URL de cover:
                     <input class="add-product__input" id="cover" type="text" placeholder="Ingrese el URL del cover">
                 </label>
-                <label class="add-product__label" for="category">Categoria
+                <label class="add-product__label" for="category">Categoria:
                     <input class="add-product__input" id="category" type="text" placeholder="Ej: Consolas, Star wars, Diversos, etc">
                 </label>
-                <label class="add-product__label" for="name">Nombre del producto
+                <label class="add-product__label" for="name">Nombre del producto:
                     <input class="add-product__input" id="name" type="text" placeholder="Escriba el nombre del porducto">
                 </label>
-                <label class="add-product__label" for="price">Precio del producto
-                    <input class="add-product__input" id="price" type="text" placeholder="$99.999 COP">
+                <label class="add-product__label" for="price">Precio del producto: ($ COP)
+                    <input class="add-product__input" id="price" type="number"  min="10000" max="5000000" placeholder="min $10.000, max $5.000.000">
                 </label>
-                <label class="add-product__label" for="description">Descripción del producto
-                    <textarea class="add-product__input" id="description" cols="30" rows="10" placeholder="Escriba la descripción del producto"></textarea>
+                <label class="add-product__label" for="descount">Agregar descuento: (%)
+                    <input class="add-product__input" id="descount" type="number" min="5" max="30" placeholder="min 5%, max 30%">
+                </label>
+                <label class="add-product__label" for="description">Descripción del producto:
+                    <textarea class="add-product__input" id="description" cols="30" rows="5" placeholder="Escriba la descripción del producto"></textarea>
                 </label>
                 <input class="add-product__input add-product__button" id="button-add" type="submit" value="Agregar">
+            </div>
+            <div class="add-product-preview">
+                <h2 class="add-product-preview__title" data-title>Preview del producto:</h2>
+                <div class="product card-view" data-product>
+                    <div class="product__mark "></div>
+                    <img class="product__preview" data-cover src="./assets/images/preview.jpg" alt="preview de producto">
+                    <div class="product-content">
+                        <span class="product-content__price-before" data-price-before>$0</span>
+                        <p class="product-content__price"><span data-price>$99.999</span> <span class="product-content__descount " data-descount>0% OFF</span></p>
+                        <p class="product-content__details" data-name>Nombre de producto</p>
+                    </div>
+                </div>
             </div>
         </form>
     </main>
@@ -104,6 +119,7 @@
         </section>
     </footer>
 </body>
-<script src="./assets/javascript/controllers/header.controller.js"></script>
-<script src="./assets/javascript/controllers/login.controller.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+<script src="./assets/javascript/controllers/header.controller.js" type="module"></script>
+<script src="./assets/javascript/controllers/add.controller.js" type="module"></script>
 </html>
