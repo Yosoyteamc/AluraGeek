@@ -395,7 +395,7 @@ footer {
 }
 .login-container .login__input {
   margin: 5px 0 15px 0;
-  height: 25px;
+  min-height: 25px;
   padding: 5px;
 }
 .login-container .login__label {
@@ -408,8 +408,8 @@ footer {
   border: none;
   background-color: var(--color-blue);
   color: var(--color-white);
-  font-size: 1.1rem;
-  height: 35px;
+  min-height: 35px;
+  padding: 10px;
 }
 
 :root {
