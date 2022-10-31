@@ -24,6 +24,11 @@ body{
     margin: auto;
     position: relative;
     width: clamp(340px, calc(100vw - 20px),  748px);
+    @media screen and (min-width: 1024px) {
+        width: calc(100vw - 20px);
+        max-width: 1113px;
+        margin: auto;
+    }
 }
 
 .not{

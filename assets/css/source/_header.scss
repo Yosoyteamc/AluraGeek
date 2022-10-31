@@ -5,11 +5,36 @@
     display: flex;
     justify-content: space-between;
     height: 50px;
+    @media screen and (min-width: 1024px) {
+        &-menu, &-search{
+            display: none;
+        }      
+    }
     .icon{
         height: 25px;
         width: 25px;
         &:hover{
             cursor: pointer;
+        }
+        @media screen and (min-width:1024px) {
+            width: 23px;
+            height: 23px;           
+        }
+    }
+    &-login{
+        display: none;
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            &__link{
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: $color-blue;
+                font-weight: 300;
+                &-img{
+                    width: 16px;
+                }
+            }
         }
     }
     &-logo{
@@ -26,7 +51,17 @@
         margin-left: -1px;
         position: absolute;
         width: calc(100% - 2px);
+        @media screen and (min-width: 1024px) {
+            position: relative;
+            width: 393px;
+            flex-direction: row-reverse;
+        }
         .search-form{
+            @media screen and (min-width: 1024px) {
+                &-close__icon{
+                    display: none;
+                }
+            }
             &__button{
                 align-items: center;
                 display: flex;
@@ -48,6 +83,9 @@
     }
     .search-form{
         display: none;
+        @media screen and (min-width:1024px) {
+            display: flex;
+        }
     }
 }
 
@@ -61,10 +99,15 @@
     .post{
         &__media{
             height: calc(100vw / 3);
-            max-height: 300px;
+            min-height: 100px;
+            max-height: 200px;
             width: clamp(340px, calc(100vw - 20px),  748px);
             border-radius: 10px;
             object-fit: cover;
+            @media screen and (min-width: 1024px) {
+                width: calc(100vw - 20px);
+                max-width: 1113px;
+            }
         } 
         &-text{
             position: absolute;

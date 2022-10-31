@@ -58,5 +58,5 @@ const touchProduct = () =>{
 
 const button = document.getElementById("button-add");
 button.addEventListener("click",()=>{
-    document.location.href = "/add.html"
+    document.location.href = "./add.html"
 })
