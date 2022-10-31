@@ -43,27 +43,27 @@
         </section>
     </header>
     <main class="container">
-        <div class="add-product">
+        <form class="add-product">
             <div class="add-product-container">
                 <h2 class="add-product__title">Agregar nuevo producto</h2>
                 <label class="add-product__label" for="cover">URL de cover:
-                    <input class="add-product__input" name="cover" type="text" placeholder="Ingrese el URL del cover">
+                    <input class="add-product__input" id="cover" type="text" placeholder="Ingrese el URL del cover">
                 </label>
                 <label class="add-product__label" for="category">Categoria
-                    <input class="add-product__input" name="category" type="text" placeholder="Ej: Consolas, Star wars, Diversos, etc">
+                    <input class="add-product__input" id="category" type="text" placeholder="Ej: Consolas, Star wars, Diversos, etc">
                 </label>
                 <label class="add-product__label" for="name">Nombre del producto
-                    <input class="add-product__input" name="name" type="text" placeholder="Escriba el nombre del porducto">
+                    <input class="add-product__input" id="name" type="text" placeholder="Escriba el nombre del porducto">
                 </label>
-                <label class="add-product__label" for="category">Precio del producto
-                    <input class="add-product__input" name="category" type="text" placeholder="$xxx.xxx COP">
+                <label class="add-product__label" for="price">Precio del producto
+                    <input class="add-product__input" id="price" type="text" placeholder="$99.999 COP">
                 </label>
                 <label class="add-product__label" for="description">Descripción del producto
-                    <textarea class="add-product__input" name="description" cols="30" rows="10" placeholder="Escriba la descripción del producto"></textarea>
+                    <textarea class="add-product__input" id="description" cols="30" rows="10" placeholder="Escriba la descripción del producto"></textarea>
                 </label>
-                <input class="add-product__input add-product__button" id="button-add" type="button" value="Agregar">
+                <input class="add-product__input add-product__button" id="button-add" type="submit" value="Agregar">
             </div>
-        </div>
+        </form>
     </main>
     <footer>
         <section class="container foot-expand">
