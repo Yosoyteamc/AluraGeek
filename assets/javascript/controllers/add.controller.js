@@ -13,6 +13,7 @@ const priceBefore = document.querySelector("[data-price-before]");
 const buttonAddProduct = document.getElementById("button-add");
 const lastcategory = document.getElementById("category");
 const lastdescription = document.getElementById("description");
+const form = document.querySelector("[data-form]");
 
 lastname.addEventListener("input",()=>{
     nameProduct.textContent = lastname.value;
@@ -66,8 +67,9 @@ const createObjectProduct = () =>{
     return product;
 }
 
-buttonAddProduct.addEventListener("click",(e)=>{
-    e.preventDefault();
+form.addEventListener("submit",(e)=>{
+    //e.preventDefault();
     clientServices.createProduct(createObjectProduct());
+    //form.reset();
 })
 

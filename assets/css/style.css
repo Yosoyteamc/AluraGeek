@@ -605,9 +605,6 @@ footer {
   height: 18px;
   background-image: url("../images/icons/alike.svg");
 }
-.add-product-preview .product__mark:hover {
-  cursor: pointer;
-}
 .add-product-preview .product__preview {
   border-radius: 10px;
   object-fit: cover;
