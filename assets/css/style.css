@@ -124,12 +124,13 @@
 .products-container .product__mark {
   position: absolute;
   right: 8px;
-  top: 5px;
-  width: 20px;
-  height: 20px;
+  top: 8px;
+  width: 18px;
+  height: 18px;
   background-image: url("../images/icons/alike.svg");
 }
 .products-container .product__mark--like {
+  transform: scale(1.2);
   background-image: url("../images/icons/like.svg");
 }
 .products-container .product__mark:hover {
@@ -194,8 +195,8 @@
 }
 
 .scale-up-center {
-  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+  animation: scale-up-center 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
 }
 
 @-webkit-keyframes scale-up-center {

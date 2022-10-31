@@ -34,11 +34,13 @@
             &__mark{
                 position: absolute;
                 right: 8px;
-                top: 5px;
-                width: 20px;
-                height: 20px;
+                top: 8px;
+                width: 18px;
+                height: 18px;
                 background-image: url("../images/icons/alike.svg");
+                //transition: all 3s ease-in-out;
                 &--like{
+                    transform: scale(1.2);
                     background-image: url("../images/icons/like.svg");
                 }
                 &:hover{
@@ -104,8 +106,8 @@
 }
 
 .scale-up-center {
-	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
 }
 
  @-webkit-keyframes scale-up-center {
