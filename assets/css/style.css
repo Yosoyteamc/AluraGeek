@@ -386,7 +386,7 @@ footer {
 .login-container {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 90%;
   max-width: 400px;
 }
 .login-container .login__title {
