@@ -10,7 +10,7 @@
      },
      "category": "Star wars",
      "belike": false,
-     "cover": "../assets/images/products/star-wars-5.jpg",
+     "cover": "./assets/images/products/star-wars-5.jpg",
      "description": "Taza de café estilo Stormtrooper, acompaña tus mañanas y tardes de la mano de una cabeza de un soldado de la tropa de asalto del Imperio Galáctico"
     },
     {
@@ -24,7 +24,7 @@
      },
      "category": "Star wars",
      "belike": false,
-     "cover": "../assets/images/products/star-wars-2.jpg",
+     "cover": "./assets/images/products/star-wars-2.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -38,7 +38,7 @@
      },
      "category": "Star wars",
      "belike": false,
-     "cover": "../assets/images/products/star-wars-6.jpg",
+     "cover": "./assets/images/products/star-wars-6.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -52,7 +52,7 @@
      },
      "category": "Star wars",
      "belike": false,
-     "cover": "../assets/images/products/star-wars-1.jpg",
+     "cover": "./assets/images/products/star-wars-1.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -66,7 +66,7 @@
      },
      "category": "Star wars",
      "belike": false,
-     "cover": "../assets/images/products/star-wars-4.jpg",
+     "cover": "./assets/images/products/star-wars-4.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -80,7 +80,7 @@
      },
      "category": "Star wars",
      "belike": false,
-     "cover": "../assets/images/products/star-wars-3.jpg",
+     "cover": "./assets/images/products/star-wars-3.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -94,7 +94,7 @@
      },
      "category": "Consolas",
      "belike": false,
-     "cover": "../assets/images/products/consolas-5.jpg",
+     "cover": "./assets/images/products/consolas-5.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -108,7 +108,7 @@
      },
      "category": "Consolas",
      "belike": false,
-     "cover": "../assets/images/products/consolas-2.jpg",
+     "cover": "./assets/images/products/consolas-2.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -122,7 +122,7 @@
      },
      "category": "Consolas",
      "belike": false,
-     "cover": "../assets/images/products/consolas-1.jpg",
+     "cover": "./assets/images/products/consolas-1.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -136,7 +136,7 @@
      },
      "category": "Consolas",
      "belike": false,
-     "cover": "../assets/images/products/consolas-3.jpg",
+     "cover": "./assets/images/products/consolas-3.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -150,7 +150,7 @@
      },
      "category": "Consolas",
      "belike": false,
-     "cover": "../assets/images/products/consolas-6.jpg",
+     "cover": "./assets/images/products/consolas-6.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -164,7 +164,7 @@
      },
      "category": "Consolas",
      "belike": false,
-     "cover": "../assets/images/products/consolas-4.jpg",
+     "cover": "./assets/images/products/consolas-4.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -178,7 +178,7 @@
      },
      "category": "Diversos",
      "belike": false,
-     "cover": "../assets/images/products/diversos-1.jpg",
+     "cover": "./assets/images/products/diversos-1.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -192,7 +192,7 @@
      },
      "category": "Diversos",
      "belike": false,
-     "cover": "../assets/images/products/diversos-4.jpg",
+     "cover": "./assets/images/products/diversos-4.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -206,7 +206,7 @@
      },
      "category": "Diversos",
      "belike": false,
-     "cover": "../assets/images/products/diversos-6.jpg",
+     "cover": "./assets/images/products/diversos-6.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -220,7 +220,7 @@
      },
      "category": "Diversos",
      "belike": false,
-     "cover": "../assets/images/products/diversos-5.jpg",
+     "cover": "./assets/images/products/diversos-5.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -234,7 +234,7 @@
      },
      "category": "Diversos",
      "belike": false,
-     "cover": "../assets/images/products/diversos-2.jpg",
+     "cover": "./assets/images/products/diversos-2.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
@@ -248,7 +248,7 @@
      },
      "category": "Diversos",
      "belike": false,
-     "cover": "../assets/images/products/diversos-3.jpg",
+     "cover": "./assets/images/products/diversos-3.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
     },
     {
