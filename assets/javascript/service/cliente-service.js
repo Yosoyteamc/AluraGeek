@@ -50,6 +50,16 @@ const createProduct = async(product = new Product()) => {
     }
   }
 
+const detailProduct = async(id) =>{
+    try {
+        data = await fetch(URL_PRODUCTS+`/${id}`).then(response=>response.json()).then(responseJSON => responseJSON)
+        
+    } catch (error) {
+        console.log("Producto no encontrado");
+    }
+    return data;
+}
+
 export const clientServices = {
-    productList, createProduct, authUSER,
+    productList, createProduct, authUSER, detailProduct,
 }

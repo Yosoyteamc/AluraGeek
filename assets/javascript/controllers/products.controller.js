@@ -51,7 +51,7 @@ const touchProduct = () =>{
     const products = document.querySelectorAll("[data-product]");
     products.forEach((product)=>{
         product.addEventListener("click",()=>{
-            //console.log(product.dataset.product);
+            window.location.href = `./product.html?id=${product.dataset.product}`
         })
     })
 }
