@@ -45,7 +45,7 @@ lastdescount.addEventListener("input",()=>{
 
 const createObjectProduct = () =>{
     const product = new Product();
-    product.id = uuid.v4();
+    //product.id = uuid.v4();
     product.name = lastname.value.toString();
     if(lastdescount.value.toString().length >= 1){
         const active = true;
@@ -66,12 +66,12 @@ const createObjectProduct = () =>{
     product.cover = lastcover.value;
     product.belike = false;
     product.description = lastdescription.value;
+    console.log(product);
     return product;
 }
 
 form.addEventListener("submit",(e)=>{
-    //e.preventDefault();
+    e.preventDefault();
     clientServices.createProduct(createObjectProduct());
-    //form.reset();
+    form.reset();
 })
-

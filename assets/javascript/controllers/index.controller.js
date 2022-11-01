@@ -9,7 +9,7 @@ const createSection = (title)=>{
     const sectionInnerHTML = `
     <section class="products" id="${id}">
         <div class="products__title">
-            <h2 class="products__title-content"><a class="products__title-link" href="#">Artículos: ${title} <img class="products__title-link-img" src="./assets/images/icons/right.svg" alt="icono"></a></h2>
+            <h2 class="products__title-content"><a class="products__title-link" href="#">Artículos: ${title} <img class="products__title-link-img" src="../assets/images/icons/right.svg" alt="icono"></a></h2>
         </div>
         <div class="products-container ${scrollerActive}" data-products="${title}">
         </div>
