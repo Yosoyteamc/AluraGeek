@@ -47,14 +47,14 @@ const setLike = () =>{
     })
 }
 
-const touchProduct = () =>{
-    const products = document.querySelectorAll("[data-product]");
-    products.forEach((product)=>{
-        product.addEventListener("click",()=>{
-            window.location.href = `./product.html?id=${product.dataset.product}`
-        })
-    })
-}
+// const touchProduct = () =>{
+//     const products = document.querySelectorAll("[data-product]");
+//     products.forEach((product)=>{
+//         product.addEventListener("click",()=>{
+//             window.location.href = `./product.html?id=${product.dataset.product}`
+//         })
+//     })
+// }
 
 const button = document.getElementById("button-add");
 button.addEventListener("click",()=>{
