@@ -53,7 +53,11 @@
                     <input class="add-product__input" id="cover" type="text" required placeholder="Ingrese el URL del cover">
                 </label>
                 <label class="add-product__label" for="category">Categoria:
-                    <input class="add-product__input" id="category" type="text" required placeholder="Ej: Consolas, Star wars, Diversos, etc">
+                    <select class="add-product__input add-product__input--select" id="category" required>
+                        <option value="Diversos">Diversos</option>
+                        <option value="Consolas">Consolas</option>
+                        <option value="Star wars">Star wars</option>
+                    </select>
                 </label>
                 <label class="add-product__label" for="name">Nombre del producto:
                     <input class="add-product__input" id="name" type="text" required placeholder="Escriba el nombre del producto">

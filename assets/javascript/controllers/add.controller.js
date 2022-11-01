@@ -17,6 +17,7 @@ const form = document.querySelector("[data-form]");
 
 lastname.addEventListener("input",()=>{
     nameProduct.textContent = lastname.value;
+    console.log(lastcategory.value);
 })
 
 lastcover.addEventListener("input",()=>{
@@ -27,6 +28,7 @@ lastprice.addEventListener("input",()=>{
     const priceConvert = new Intl.NumberFormat('de-DE').format(parseInt(lastprice.value));
     const newPrice = "$"+ priceConvert;
     priceProduct.textContent = newPrice;
+    lastdescount.value = "";
 })
 
 lastdescount.addEventListener("input",()=>{

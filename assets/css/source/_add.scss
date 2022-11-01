@@ -33,6 +33,12 @@
                 outline: none;
                 font-family: $font-family;
                 font-weight: 300;
+                &--select{
+                    outline: none;
+                    option{
+                        font-weight: 300;
+                    }
+                }
             }
             &__label{
                 font-size: .8rem;

@@ -558,6 +558,12 @@ footer {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
+.add-product-container .add-product__input--select {
+  outline: none;
+}
+.add-product-container .add-product__input--select option {
+  font-weight: 300;
+}
 .add-product-container .add-product__label {
   font-size: 0.8rem;
   font-weight: 500;
