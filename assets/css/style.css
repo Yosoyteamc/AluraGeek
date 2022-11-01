@@ -197,9 +197,6 @@
     width: 162px;
     margin-right: 20px;
   }
-  .products-container .product:nth-child(1) {
-    margin-left: 10px;
-  }
   .products-container .product .product__mark {
     display: none;
   }
