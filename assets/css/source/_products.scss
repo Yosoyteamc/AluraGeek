@@ -48,6 +48,7 @@
             margin-left: 0;
             width: 152px;
             position: relative;
+            z-index: 3;
             height: min-content;
             @media screen and (min-width: 1024px) {
                 width: 162px;
@@ -71,6 +72,7 @@
                 top: 8px;
                 width: 18px;
                 height: 18px;
+                z-index: 20;
                 background-image: url("../images/icons/alike.svg");
                 //transition: all 3s ease-in-out;
                 &--like{
