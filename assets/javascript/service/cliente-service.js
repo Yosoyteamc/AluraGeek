@@ -23,7 +23,7 @@ const authUSER = async (email,pass) =>{
         }
     } catch (error) {
         result = false;
-        console.log("Contraseña y/o usuario incorrecto");
+        //console.log("Contraseña y/o usuario incorrecto");
     }
     return result;
 }
@@ -49,7 +49,7 @@ const createProduct = async(product = new Product()) => {
               "content-Type": "application/json"
             },
             body: JSON.stringify(product)
-        }).then( response => console.log(response)).catch(error => console.log(error));
+        }).then( response => alert("Producto creado")).catch(error => alert("Producto no creado"));
     } catch (error) {
         console.log("ERROR: SAVING IN SERVER LOCAL");
         data = JSON.parse(localStorage.getItem("db-products")) || dataJSON;
