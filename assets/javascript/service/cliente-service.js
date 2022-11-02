@@ -1,7 +1,8 @@
 import dataJSON from "../../../server/db.json" assert {type:"json"}
-import { Product } from "../components/product.class.js";
+import { Product } from "../models/product.class.js";
 let data; 
 const URL_USER = "https://636079be67d3b7a0a6af7b39.mockapi.io/api/v1/users";
+const URL_ACCESS = "https://636079be67d3b7a0a6af7b39.mockapi.io/api/v1/users/1/Access"
 const URL_PRODUCTS = "https://636079be67d3b7a0a6af7b39.mockapi.io/api/v1/products";
 let addlike; 
 
@@ -10,6 +11,14 @@ const authUSER = async (email,pass) =>{
     try {
         data = await fetch(URL_USER + `?email=${email}`).then( response => response.json()).then( responseJSON => responseJSON);
         if(data[0].password === pass){
+            const access = {userId: data[0].id, datatime: (new Date()).toLocaleString()}
+            await fetch(URL_ACCESS,{
+                method: "POST",
+                headers:{
+                  "content-Type": "application/json"
+                },
+                body: JSON.stringify(access)
+            }).catch(error => console.log(error));
             result = true;
         }
     } catch (error) {

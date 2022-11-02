@@ -1,5 +1,6 @@
-import { Product } from "../components/product.class.js";
+import { Product } from "../models/product.class.js";
 import { clientServices } from "../service/cliente-service.js";
+import { Validateservice } from "../service/validate-service.js";
 //import { v4 as uuidv4 } from 'uuid';
 const lastname = document.getElementById("name");
 const nameProduct = document.querySelector("[data-name]");
@@ -15,13 +16,20 @@ const lastcategory = document.getElementById("category");
 const lastdescription = document.getElementById("description");
 const form = document.querySelector("[data-form]");
 
+Validateservice.validateInput(lastname);
+Validateservice.validateInput(lastcover);
+Validateservice.validateInput(lastprice);
+Validateservice.validateInput(lastdescount);
+Validateservice.validateInput(lastdescription);
+
+
 lastname.addEventListener("input",()=>{
     nameProduct.textContent = lastname.value;
-    console.log(lastcategory.value);
 })
 
 lastcover.addEventListener("input",()=>{
-    coverProduct.src = lastcover.value
+    coverProduct.src = lastcover.value;
+
 })
 
 lastprice.addEventListener("input",()=>{

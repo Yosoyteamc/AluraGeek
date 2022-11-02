@@ -1,10 +1,14 @@
 import { clientServices } from "../service/cliente-service.js";
+import { Validateservice } from "../service/validate-service.js";
 
 const button = document.getElementById("button-login");
 const form = document.getElementById("form-login")
 const emailArea = document.getElementById("email");
 const passArea = document.getElementById("password");
 
+
+Validateservice.validateInput(emailArea);
+Validateservice.validateInput(passArea);
 
 form.addEventListener("submit",(e)=>{
     e.preventDefault();

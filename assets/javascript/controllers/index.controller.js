@@ -1,4 +1,4 @@
-import { Product } from "../components/product.class.js";
+//import { Product } from "../models/product.class.js";
 import { clientServices } from "../service/cliente-service.js";
 const log = console.log;
 

@@ -789,4 +789,8 @@ body {
   visibility: hidden;
 }
 
+.input--invalid {
+  border: 1px solid rgb(207, 0, 0) !important;
+}
+
 /*# sourceMappingURL=style.css.map */

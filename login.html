@@ -41,7 +41,7 @@
                 <li class="modal__item modal__item--title">Contacto</li>
                 <li class="modal__item modal__item--login"><a class="modal__link" href="#">Contáctanos</a></li>
                 <li class="modal__item modal__item--title">Inicio</li>
-                <li class="modal__item modal__item--login"><a class="modal__link" href="./index.html">Regresar<img class="modal__link-img" src="./assets/images/icons/right.svg" alt="icono"></a></li>
+                <li class="modal__item modal__item--login"><a class="modal__link" href="./index.html">Ir al inicio<img class="modal__link-img" src="./assets/images/icons/right.svg" alt="icono"></a></li>
             </ul>
         </section>
     </header>
@@ -50,10 +50,10 @@
             <form class="login-container" id="form-login">
                 <h2 class="login__title">Iniciar Sesión</h2>
                 <label class="login__label" for="email"> Correo electrónico:
-                    <input class="login__input" id="email" type="email" required placeholder="Ingrese su correo electrónico">
+                    <input class="login__input" id="email" type="email" pattern=".+@alurageek\.com" required placeholder="Ejemplo@alurageek.com">
                 </label>
                 <label class="login__label" for="password"> Contraseña
-                    <input class="login__input" id="password" type="password" required placeholder="Escriba su contraseña">
+                    <input class="login__input" id="password" type="password" autocomplete="on" required placeholder="Escriba su contraseña">
                 </label>
                 <input class="login__input login__button" id="button-login" type="submit" value="Entrar">
             </form>
