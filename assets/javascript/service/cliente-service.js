@@ -65,6 +65,7 @@ const controLikeProductLocal = (id)=>{
     let found = false;
     if (!addlike.length){
         addlike.push({id, liked:true});
+        localStorage.setItem("products-liked", JSON.stringify(addlike));
         return;
     }
     addlike.forEach(product => {
@@ -78,7 +79,7 @@ const controLikeProductLocal = (id)=>{
 }
 
 const likedProduct = (id) =>{
-    let result = false
+    let result = false;
     addlike = JSON.parse(localStorage.getItem("products-liked")) || [];
     if (!addlike.length){ return false}
     addlike.forEach((product)=>{
