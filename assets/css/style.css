@@ -740,6 +740,7 @@ footer {
   cursor: pointer;
 }
 .view-product-details__title {
+  width: 85%;
   font-size: 2rem;
   margin-bottom: 30px;
 }
