@@ -8,6 +8,8 @@ const name = document.querySelector("[data-name]");
 const price = document.querySelector("[data-price]");
 const descount = document.querySelector("[data-descount]");
 const description = document.querySelector("[data-desc]");
+const heart = document.querySelector("[data-like-real]");
+
 
 if(id === null){
     window.location.href = `./index.html`
@@ -21,13 +23,23 @@ thumbnails.forEach((thumbnail)=>{
 name.textContent = product.name
 cover.src = product.cover;
 price.textContent = "$"+product.price+" COP";
-descount.textContent = product.descount.porcent+" OFF";
+if(product.descount.active){
+    descount.textContent = product.descount.porcent+" OFF";
+}
+else{
+    descount.textContent = "";
+}
 description.textContent = product.description;
+
+if(clientServices.likedProduct(product.id)){ 
+    heart.classList.add("view-product-details__mark--like")
+}
+
 
 const createProduct = (product) =>{
     let like = "";
     let activeDescount = "";
-    if(product.belike){ like = "product__mark--like"}
+    if(clientServices.likedProduct(product.id)){ like = "product__mark--like"}
     if(!product.descount.active){ activeDescount = "not"}
     const productInnerHTML = `
     <div class="product card-view" data-product="${product.id}">
@@ -69,11 +81,18 @@ const setLike = () =>{
     const hearts = document.querySelectorAll("[data-like]");
     hearts.forEach((heart)=>{
         heart.addEventListener("click",()=>{
-             heart.classList.toggle("product__mark--like");
-             heart.classList.toggle("scale-up-center");
+            //  heart.classList.toggle("product__mark--like");
+            //  heart.classList.toggle("scale-up-center");
         });
     })
 }
+
+
+heart.addEventListener("click",()=>{
+        heart.classList.toggle("view-product-details__mark--like");
+        heart.classList.toggle("scale-up-center");
+        clientServices.controLikeProductLocal(product.id);
+});
 
 const touchProduct = () =>{
     const products = document.querySelectorAll("[data-product]");

@@ -3,7 +3,7 @@ import { Product } from "../components/product.class.js";
 let data; 
 const URL_USER = "https://636079be67d3b7a0a6af7b39.mockapi.io/api/v1/users";
 const URL_PRODUCTS = "https://636079be67d3b7a0a6af7b39.mockapi.io/api/v1/products";
-
+let addlike; 
 
 const authUSER = async (email,pass) =>{
     let result = false
@@ -60,6 +60,36 @@ const detailProduct = async(id) =>{
     return data;
 }
 
+const controLikeProductLocal = (id)=>{
+    addlike = JSON.parse(localStorage.getItem("products-liked")) || [];
+    let found = false;
+    if (!addlike.length){
+        addlike.push({id, liked:true});
+        return;
+    }
+    addlike.forEach(product => {
+        if(product.id === id){
+            product.liked = !product.liked
+            found = true;
+        }    
+    });
+    if(!found){addlike.push({id, liked:true})}
+    localStorage.setItem("products-liked", JSON.stringify(addlike));
+}
+
+const likedProduct = (id) =>{
+    let result = false
+    addlike = JSON.parse(localStorage.getItem("products-liked")) || [];
+    if (!addlike.length){ return false}
+    addlike.forEach((product)=>{
+        if(product.id === id){
+            result = product.liked;
+        }
+    })
+    return result;
+}
+
+
 export const clientServices = {
-    productList, createProduct, authUSER, detailProduct,
+    productList, createProduct, authUSER, detailProduct, controLikeProductLocal, likedProduct,
 }

@@ -3,7 +3,7 @@ import { clientServices } from "../service/cliente-service.js";
 const createProduct = (product) =>{
     let like = "";
     let activeDescount = "";
-    if(product.belike){ like = "product__mark--like"}
+    if(clientServices.likedProduct(product.id)){ like = "product__mark--like"}
     if(!product.descount.active){ activeDescount = "not"}
     const productInnerHTML = `
     <div class="product card-view" data-product="${product.id}">
@@ -41,20 +41,20 @@ const setLike = () =>{
     const hearts = document.querySelectorAll("[data-like]");
     hearts.forEach((heart)=>{
         heart.addEventListener("click",()=>{
-             heart.classList.toggle("product__mark--like");
-             heart.classList.toggle("scale-up-center");
+            //  heart.classList.toggle("product__mark--like");
+            //  heart.classList.toggle("scale-up-center");
         });
     })
 }
 
-// const touchProduct = () =>{
-//     const products = document.querySelectorAll("[data-product]");
-//     products.forEach((product)=>{
-//         product.addEventListener("click",()=>{
-//             window.location.href = `./product.html?id=${product.dataset.product}`
-//         })
-//     })
-// }
+const touchProduct = () =>{
+    const products = document.querySelectorAll("[data-product]");
+    products.forEach((product)=>{
+        product.addEventListener("click",()=>{
+            window.location.href = `./product.html?id=${product.dataset.product}`
+        })
+    })
+}
 
 const button = document.getElementById("button-add");
 button.addEventListener("click",()=>{

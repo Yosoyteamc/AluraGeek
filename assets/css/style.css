@@ -190,7 +190,7 @@
   margin-left: 0;
   width: 152px;
   position: relative;
-  z-index: 3;
+  z-index: 1;
   height: min-content;
 }
 @media screen and (min-width: 1024px) {
@@ -716,11 +716,28 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 @media screen and (min-width: 1024px) {
   .view-product-details {
     width: 400px;
   }
+}
+.view-product-details__mark {
+  position: absolute;
+  right: 8px;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  background-image: url("../images/icons/alike.svg");
+}
+.view-product-details__mark--like {
+  display: block !important;
+  transform: scale(1.2);
+  background-image: url("../images/icons/like.svg");
+}
+.view-product-details__mark:hover {
+  cursor: pointer;
 }
 .view-product-details__title {
   font-size: 2rem;
