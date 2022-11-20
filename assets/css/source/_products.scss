@@ -19,6 +19,7 @@
             justify-content: space-between;
             align-items: center;
             margin: 30px 0;
+            text-transform: capitalize;
             h2{
                 font-size: 1.3rem;
                 font-weight: 400;
@@ -39,20 +40,30 @@
     &-container{
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: space-around;
         min-height: 250px;
         overflow-x: hidden;
+        &--search{
+            justify-content: flex-start;
+            min-height: 550px;
+            height: 50vh;
+        }
+        @media screen and (min-width: 1024px) {
+            justify-content: flex-start;
+        }
+        // border: 1px solid;
         .product{
-            margin: 15px;
-            margin-top: 0;
-            margin-left: 0;
+            // margin: 15px;
+            margin-top: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
             width: 152px;
             position: relative;
             z-index: 1;
             height: min-content;
             @media screen and (min-width: 1024px) {
                 width: 162px;
-                margin-right: 20px;
+                margin-right: 10px;
                 .product__mark{
                     display: none;
                 }
@@ -85,15 +96,22 @@
                 }
             }
             &__preview{
+                border: .5px solid hsla(40, 18%, 87%, 0.507);
                 border-radius: 10px;
                 object-fit: cover;
                 -webkit-user-select: none;
                 user-select: none;
+                font-size: .8rem;
+                text-transform: capitalize;
                 width: 152px;
                 height: 152px;
+                min-height: 152px;
+                min-width: 152px;
                 @media screen and (min-width: 1024px) {
                     width: 162px;
                     height: 162px;
+                    min-height: 162px;
+                    min-width: 162px;
                 }
             }
             &-content{
@@ -133,6 +151,7 @@
         overflow-x: scroll;
         overflow-y: hidden;
         flex-wrap: nowrap;
+        justify-content: flex-start;
         @media screen and (min-width: 1025px) {
             flex-wrap: wrap;
             overflow-y: hidden !important;

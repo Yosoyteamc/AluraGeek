@@ -88,8 +88,8 @@
      "name": "Xbox X",
      "price": "2.799.900",
      "descount": {
-      "porcent": "10%",
-      "priceBefore": "3.079.890",
+      "porcent": "30%",
+      "priceBefore": "3.639.870",
       "active": true
      },
      "category": "Consolas",
@@ -102,9 +102,9 @@
      "name": "Playstation 5",
      "price": "3.899.000",
      "descount": {
-      "porcent": " ",
-      "priceBefore": " ",
-      "active": false
+      "porcent": "30%",
+      "priceBefore": "5.068.700",
+      "active": true
      },
      "category": "Consolas",
      "belike": false,
@@ -158,8 +158,8 @@
      "name": "Nintendo Switch",
      "price": "1.690.000",
      "descount": {
-      "porcent": "10%",
-      "priceBefore": "1.859.000",
+      "porcent": "30%",
+      "priceBefore": "2.197.000",
       "active": true
      },
      "category": "Consolas",

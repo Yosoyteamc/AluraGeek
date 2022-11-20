@@ -26,7 +26,7 @@ const createProduct = (product) =>{
     const productInnerHTML = `
     <div class="product card-view" data-product="${product.id}">
         <div class="product__mark ${like}" data-like></div>
-        <img class="product__preview" src=${product.cover} alt="preview de producto">
+        <img class="product__preview" src=${product.cover} alt="preview">
         <div class="product-content">
             <span class="product-content__price-before ${activeDescount}">$${product.descount.priceBefore}</span>
             <p class="product-content__price">$${product.price} <span class="product-content__descount ${activeDescount}">${product.descount.porcent} OFF</span></p>
@@ -84,3 +84,10 @@ const touchProduct = () =>{
     })
 }
 
+const formSearch = document.querySelector("#form-search"); 
+const inputSearch = document.querySelector("#search-text"); 
+
+formSearch.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    window.location.href = `search.html?name=${inputSearch.value}`
+})

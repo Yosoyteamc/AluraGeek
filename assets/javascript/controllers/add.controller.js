@@ -83,3 +83,11 @@ form.addEventListener("submit",(e)=>{
     clientServices.createProduct(createObjectProduct());
     form.reset();
 })
+
+const formSearch = document.querySelector("#form-search"); 
+const inputSearch = document.querySelector("#search-text"); 
+
+formSearch.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    window.location.href = `search.html?name=${inputSearch.value}`
+})

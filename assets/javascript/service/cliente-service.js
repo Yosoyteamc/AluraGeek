@@ -21,8 +21,11 @@ const authUSER = async (email,pass) =>{
             }).catch(error => console.log(error));
             result = true;
         }
+        else{
+            result = false
+        }
     } catch (error) {
-        result = false;
+        result = undefined;
         //console.log("Contraseña y/o usuario incorrecto");
     }
     return result;
@@ -61,8 +64,16 @@ const createProduct = async(product = new Product()) => {
 
 const detailProduct = async(id) =>{
     try {
-        data = await fetch(URL_PRODUCTS+`/${id}`).then(response=>response.json()).then(responseJSON => responseJSON)
-        
+        data = await fetch(URL_PRODUCTS+`/${id}`)
+        .then(response=>response.json())
+        .catch(()=>{
+            console.log("ERROR: CONECCT TO SERVER LOCAL");
+            const dataLocal = JSON.parse(localStorage.getItem("db-products")) || dataJSON
+            const productLocal = dataLocal.filter((product)=>{return product.id === id});
+            return productLocal[0]
+        })
+        .then(responseJSON => responseJSON)
+        // console.log(data);
     } catch (error) {
         console.log("Producto no encontrado");
     }

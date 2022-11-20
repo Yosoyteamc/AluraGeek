@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar productos</title>
+    <title>AluraGeek</title>
     <link rel="stylesheet" href="./assets/css/vendor/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- <link  rel="icon" href="assets/images/AluraGeek.ico" type="image/ico" /> -->
 </head>
 <body>
     <header class="container">
@@ -25,7 +26,7 @@
                 <img class="navbar-search__icon icon" src="./assets/images/icons/search.svg" alt="icono de búsqueda">
             </div>
             <div class="navbar-login" id="navbar-login">
-                <a class="navbar-login__link" href="javascript:history.back()">Regresar<img class="navbar-login__link-img" src="./assets/images/icons/right.svg" alt="icono"></a>
+                <a class="navbar-login__link" href="./index.html">Ir al inicio<img class="navbar-login__link-img" src="./assets/images/icons/right.svg" alt="icono"></a>
             </div>
         </nav>
         <section class="modal-bg modal-bg--active ">
@@ -41,51 +42,20 @@
                 <li class="modal__item modal__item--title">Contacto</li>
                 <li class="modal__item modal__item--login"><a class="modal__link" href="#">Contáctanos</a></li>
                 <li class="modal__item modal__item--title">Inicio</li>
-                <li class="modal__item modal__item--login"><a class="modal__link" href="javascript:history.back()">Regresar<img class="modal__link-img" src="./assets/images/icons/right.svg" alt="icono"></a></li>
+                <li class="modal__item modal__item--login"><a class="modal__link" href="./index.html">Ir al inicio<img class="modal__link-img" src="./assets/images/icons/right.svg" alt="icono"></a></li>
             </ul>
         </section>
     </header>
     <main class="container">
-        <form class="add-product" data-form>
-            <div class="add-product-container">
-                <h2 class="add-product__title">Información del nuevo producto</h2>
-                <label class="add-product__label" for="cover">URL de cover:
-                    <input class="add-product__input" id="cover" type="text" required placeholder="Ingrese el URL del cover">
-                </label>
-                <label class="add-product__label" for="category">Categoria:
-                    <select class="add-product__input add-product__input--select" id="category" required>
-                        <option value="Diversos">Diversos</option>
-                        <option value="Consolas">Consolas</option>
-                        <option value="Star wars">Star wars</option>
-                    </select>
-                </label>
-                <label class="add-product__label" for="name">Nombre del producto:
-                    <input class="add-product__input" id="name" type="text" minlength="10" required placeholder="Escriba el nombre del producto">
-                </label>
-                <label class="add-product__label" for="price">Precio del producto: ($ COP)
-                    <input class="add-product__input" id="price" required type="number" maxlength="7"  min="10000" max="5000000" placeholder="min $10.000, max $5.000.000">
-                </label>
-                <label class="add-product__label" for="descount">Agregar descuento: (%)
-                    <input class="add-product__input" id="descount" type="number" min="5" max="30" minlength="2" placeholder="min 5%, max 30%">
-                </label>
-                <label class="add-product__label" for="description">Descripción del producto:
-                    <textarea class="add-product__input" id="description" required cols="30" rows="5" minlength="20" placeholder="Escriba la descripción del producto"></textarea>
-                </label>
-                <input class="add-product__input add-product__button" id="button-add" type="submit" value="Agregar">
+        <section class="products">
+            <div class="products__title products__title--all">
+                <h2 class="products__title-content">Todos los productos</h2>
+                <!-- <input class="products__title-button" id="button-add" type="button" value="Agregar producto"> -->
             </div>
-            <div class="add-product-preview">
-                <h2 class="add-product-preview__title" data-title>Preview del producto:</h2>
-                <div class="product card-view" data-product>
-                    <div class="product__mark "></div>
-                    <img class="product__preview" data-cover src="./assets/images/preview.jpg" alt="preview de producto">
-                    <div class="product-content">
-                        <span class="product-content__price-before" data-price-before>$0</span>
-                        <p class="product-content__price"><span data-price>$99.999</span> <span class="product-content__descount " data-descount>0% OFF</span></p>
-                        <p class="product-content__details" data-name>Nombre de producto</p>
-                    </div>
-                </div>
+            <div class="products-container products-container--search" data-products="Todos">
             </div>
-        </form>
+        </section>
+       <!--Codigo generador por script-->
     </main>
     <footer>
         <section class="container foot-expand">
@@ -124,5 +94,6 @@
     </footer>
 </body>
 <script src="./assets/javascript/controllers/header.controller.js" type="module"></script>
-<script src="./assets/javascript/controllers/add.controller.js" type="module"></script>
+<script src="./assets/javascript/controllers/search.controller.js" type="module"></script>
 </html>
+
