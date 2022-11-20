@@ -1,3 +1,4 @@
+import { createAlert } from "../service/alerts-service.js";
 import { clientServices } from "../service/cliente-service.js";
 import { Validateservice } from "../service/validate-service.js";
 
@@ -5,7 +6,6 @@ import { Validateservice } from "../service/validate-service.js";
 const form = document.getElementById("form-login")
 const emailArea = document.getElementById("email");
 const passArea = document.getElementById("password");
-
 
 Validateservice.validateInput(emailArea);
 Validateservice.validateInput(passArea);
@@ -20,15 +20,15 @@ form.addEventListener("submit",(e)=>{
                 document.location.href = "./products.html"
             }
             if(response === false){
-                alert("Usuario y/o Contraseña incorrectas");
+                createAlert('ERROR','Usuario y/o Contraseña incorrectas');
             }
             if(response === undefined){
-                alert("Error de conexión")
+                createAlert('ERROR','Error de conexión');
             }
             form.reset();
         })
     } catch (error) {
-        alert("Ups! sucedio un error")
+        createAlert('ERROR','Ups! sucedio un error');
     }
     
 

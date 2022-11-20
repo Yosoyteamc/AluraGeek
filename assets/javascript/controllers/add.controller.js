@@ -74,7 +74,7 @@ const createObjectProduct = () =>{
     product.cover = lastcover.value;
     product.belike = false;
     product.description = lastdescription.value;
-    console.log(product);
+    //console.log(product);
     return product;
 }
 

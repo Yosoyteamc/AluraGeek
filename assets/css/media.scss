@@ -5,13 +5,17 @@
 @use 'source/login';
 @use 'source/add';
 @use 'source/preview';
+@use 'source/alerts';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
 
 :root{
     --color-blue-light: hsla(0, 0%, 20%, 0.089);
     --color-blue: hsl(214, 78%, 53%);
+    --color-blue-op: hsl(214, 78%, 53%, 0.8);
     --color-white: hsl(36, 100%, 98%);
     --color-green: hsl(110, 57%, 31%);
+    --color-green-op: hsl(110, 57%, 31%, 0.8);
+    --color-red-op: hsla(0, 81%, 47%, 0.8);
     --color-gray:hsl(0, 0%, 20%);
     --color-gray-light: hsl(40, 16%, 80%);
 }

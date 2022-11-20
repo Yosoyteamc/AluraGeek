@@ -1,5 +1,6 @@
 import dataJSON from "../../../server/db.json" assert {type:"json"}
 import { Product } from "../models/product.class.js";
+import { createAlert } from "./alerts-service.js";
 let data; 
 const URL_USER = "https://636079be67d3b7a0a6af7b39.mockapi.io/api/v1/users";
 const URL_ACCESS = "https://636079be67d3b7a0a6af7b39.mockapi.io/api/v1/users/1/Access"
@@ -18,7 +19,7 @@ const authUSER = async (email,pass) =>{
                   "content-Type": "application/json"
                 },
                 body: JSON.stringify(access)
-            }).catch(error => console.log(error));
+            }).catch(error => createAlert('ERROR',error));
             result = true;
         }
         else{
@@ -36,10 +37,12 @@ const productList = async() => {
         data = await fetch(URL_PRODUCTS).then( response => response.json() ).then( responseJSON => responseJSON ); 
         localStorage.setItem("db-products", JSON.stringify(data));
     } catch (error) {
-        console.log("ERROR: CONECCT TO SERVER LOCAL");
+        // console.log("ERROR: CONECCT TO SERVER LOCAL");
+        createAlert('ERROR','Error al intentar conectarse al servidor');
         data =  JSON.parse(localStorage.getItem("db-products")) || dataJSON;
         localStorage.setItem("db-products", JSON.stringify(data));
-        return data = dataJSON;
+        createAlert('NORMAL','Se importaron datos locales...');
+        return data;
     }
     return data;
 }
@@ -52,12 +55,14 @@ const createProduct = async(product = new Product()) => {
               "content-Type": "application/json"
             },
             body: JSON.stringify(product)
-        }).then( response => alert("Producto creado")).catch(error => alert("Producto no creado"));
+        }).then( response =>  createAlert('SUCCESS','Producto creado'));
     } catch (error) {
-        console.log("ERROR: SAVING IN SERVER LOCAL");
+        createAlert('ERROR','Error al intentar conectarse al servidor');
         data = JSON.parse(localStorage.getItem("db-products")) || dataJSON;
+        product.id = (dataJSON.length + 1).toString();
         data.push(product);
         localStorage.setItem("db-products", JSON.stringify(data));
+        createAlert('SUCCESS','Producto creado localmente')
         return; 
     }
   }
@@ -67,15 +72,19 @@ const detailProduct = async(id) =>{
         data = await fetch(URL_PRODUCTS+`/${id}`)
         .then(response=>response.json())
         .catch(()=>{
-            console.log("ERROR: CONECCT TO SERVER LOCAL");
+            createAlert('ERROR','No podemos acceder al contenido del servidor');
             const dataLocal = JSON.parse(localStorage.getItem("db-products")) || dataJSON
             const productLocal = dataLocal.filter((product)=>{return product.id === id});
-            return productLocal[0]
+            if(productLocal.length === 0){
+                window.location.href = `./index.html`; 
+                throw new Error("Ups, no hay producto");
+            }
+            return productLocal[0];
         })
         .then(responseJSON => responseJSON)
         // console.log(data);
     } catch (error) {
-        console.log("Producto no encontrado");
+        createAlert('ERROR','Producto no encontrado');
     }
     return data;
 }

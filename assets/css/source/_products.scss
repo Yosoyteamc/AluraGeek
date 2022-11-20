@@ -45,8 +45,7 @@
         overflow-x: hidden;
         &--search{
             justify-content: flex-start;
-            min-height: 550px;
-            height: 50vh;
+            min-height: 650px;
         }
         @media screen and (min-width: 1024px) {
             justify-content: flex-start;
@@ -116,6 +115,7 @@
             }
             &-content{
                 padding: 10px;
+                cursor: pointer;
                 &__price-before{
                     font-weight: 300;
                     font-size: .7rem;

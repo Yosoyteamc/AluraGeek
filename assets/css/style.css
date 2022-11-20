@@ -4,6 +4,8 @@
   display: flex;
   justify-content: space-between;
   height: 50px;
+  position: inherit;
+  z-index: 9;
 }
 @media screen and (min-width: 1024px) {
   .navbar-menu, .navbar-search {
@@ -187,8 +189,7 @@
 }
 .products-container--search {
   justify-content: flex-start;
-  min-height: 550px;
-  height: 50vh;
+  min-height: 650px;
 }
 @media screen and (min-width: 1024px) {
   .products-container {
@@ -262,6 +263,7 @@
 }
 .products-container .product-content {
   padding: 10px;
+  cursor: pointer;
 }
 .products-container .product-content__price-before {
   font-weight: 300;
@@ -423,7 +425,7 @@ footer {
   height: 100vh;
   width: 100vw;
   transition: all 0.5s;
-  z-index: 4;
+  z-index: 10;
 }
 .modal-bg--active {
   display: none;
@@ -494,8 +496,8 @@ footer {
   }
 }
 .login {
-  height: 80vh;
-  max-height: 650px;
+  height: 90vh;
+  max-height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -777,11 +779,78 @@ footer {
   font-size: 0.9rem;
 }
 
+.alerts {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100vw;
+  min-width: 360px;
+  max-width: 1113px;
+  margin: auto;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.alerts--not {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .alerts {
+    justify-content: flex-end;
+  }
+}
+.alerts-container {
+  position: fixed;
+  z-index: 999;
+}
+.alerts-container .alert {
+  cursor: default;
+  padding: 10px;
+  min-width: 180px;
+  background: var(--color-blue-op);
+  border-radius: 10px;
+  font-size: 0.7rem;
+  margin-bottom: 5px;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.062745098);
+}
+@media screen and (min-width: 1024px) {
+  .alerts-container .alert {
+    margin-right: 3vw;
+  }
+}
+.alerts-container .alert:last-child {
+  margin-bottom: 10vh;
+}
+.alerts-container .alert__icon {
+  width: 0.7rem;
+  padding: 0.2rem;
+  border-radius: 100%;
+  margin: 0 5px;
+}
+.alerts-container .alert__icon:hover {
+  cursor: pointer;
+}
+.alerts-container .alert--success {
+  background-color: var(--color-green-op);
+}
+.alerts-container .alert--error {
+  background-color: var(--color-red-op);
+}
+
 :root {
   --color-blue-light: hsla(0, 0%, 20%, 0.089);
   --color-blue: hsl(214, 78%, 53%);
+  --color-blue-op: hsl(214, 78%, 53%, 0.8);
   --color-white: hsl(36, 100%, 98%);
   --color-green: hsl(110, 57%, 31%);
+  --color-green-op: hsl(110, 57%, 31%, 0.8);
+  --color-red-op: hsla(0, 81%, 47%, 0.8);
   --color-gray:hsl(0, 0%, 20%);
   --color-gray-light: hsl(40, 16%, 80%);
 }
