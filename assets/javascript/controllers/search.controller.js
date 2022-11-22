@@ -94,7 +94,7 @@ clientServices.productList("LOCAL")
 const productEmpty = () => {
     const emptyInnerHTML = `
         <div class="product product--empty">
-            <img class="product__icon" src="/assets/images/icons/worried-face.svg" alt="icon">
+            <img class="product__icon" src="./assets/images/icons/worried-face.svg" alt="icon">
             <div class="product-description">
                 <p class="product-description__title">No encontramos el producto...</p>
                 <p class="product-description__text">Lo sentimos, no tenemos productos con ese nombre, 
