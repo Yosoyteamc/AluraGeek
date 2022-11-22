@@ -6,6 +6,8 @@ const categorySearch = url.searchParams.get("category") || undefined;
 const descountSearch = url.searchParams.get("descount") || undefined;
 const title = document.querySelector(".products__title-content");
 const productList = [];
+const category = "Todos";
+const productContainer = document.querySelector(`[data-products="${category}"]`);
 
 // if(nameSearch === null && categorySearch === undefined && descountSearch === undefined){
 //     console.log("Params not found");
@@ -48,8 +50,6 @@ clientServices.productList("LOCAL")
     });
 })
 .finally(()=>{
-    const category = "Todos";
-    const productContainer = document.querySelector(`[data-products="${category}"]`);
     
     if(nameSearch !== null){
         productList.forEach((product)=>{
@@ -82,10 +82,30 @@ clientServices.productList("LOCAL")
             })
           }
     }
-
     // setLike();
     touchProduct();
+    console.log(productContainer.childElementCount);
+    if(productContainer.childElementCount === 0){
+        productEmpty();
+    }
 })
+
+
+const productEmpty = () => {
+    const emptyInnerHTML = `
+        <div class="product product--empty">
+            <img class="product__icon" src="/assets/images/icons/worried-face.svg" alt="icon">
+            <div class="product-description">
+                <p class="product-description__title">No encontramos el producto...</p>
+                <p class="product-description__text">Lo sentimos, no tenemos productos con ese nombre, 
+                puedes intentar con otro nombre ó si quieres ver productos con descuentos haz 
+                <a href="./search.html?category=consolas&descount=30%"> Click aquí!</a></p>
+            </div>
+        </div>`;
+    
+    productContainer.innerHTML = emptyInnerHTML;
+    productContainer.classList.add("products-container--search-empty")
+}
 
 const touchProduct = () =>{
     const products = document.querySelectorAll("[data-product]");

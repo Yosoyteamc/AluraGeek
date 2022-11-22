@@ -46,7 +46,12 @@
         overflow: hidden;
         &--search{
             justify-content: flex-start;
-            min-height: 650px;
+            min-height: 350px !important;
+            &-empty{
+                display: flex;
+                justify-content: center !important;
+                align-items: center;
+            }
         }
         @media screen and (min-width: 1024px) {
             justify-content: flex-start;
@@ -61,6 +66,39 @@
             position: relative;
             z-index: 1;
             height: min-content;
+            &--empty{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 300px !important;
+                cursor: default !important;
+                padding: 15px;
+                .product{
+                    &__icon{
+                        width: 120px;
+                        height: 120px;
+                    }
+                    &-description{
+                        margin: 15px 0;
+                        text-align: center;
+                        &__title{
+                            font-size: 1.3rem;
+                            font-weight: 600;
+                            margin-bottom: 10px;
+                        }
+                        &__text{
+                            font-size: 0.8rem;
+                            line-height: 1.2rem;
+                            font-weight: 300;
+                            a{
+                                color: $color-blue;
+                            }
+                        }
+                    }
+                }
+
+            }
             @media screen and (min-width: 1024px) {
                 width: 162px;
                 margin-right: 10px;
