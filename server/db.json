@@ -250,33 +250,5 @@
      "belike": false,
      "cover": "./assets/images/products/diversos-3.jpg",
      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque molestias laboriosam!"
-    },
-    {
-     "name": "Poster de star wars",
-     "price": "37.500",
-     "descount": {
-      "porcent": "25%",
-      "priceBefore": "50.000",
-      "active": true
-     },
-     "category": "Star wars",
-     "belike": false,
-     "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1451092507l/28350030._SX318_.jpg",
-     "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ipsam facilis reiciendis modi?",
-     "id": "19"
-    },
-    {
-     "name": "PS3 + Controles",
-     "price": "840.000",
-     "descount": {
-      "porcent": "30%",
-      "priceBefore": "1.200.000",
-      "active": true
-     },
-     "category": "Consolas",
-     "belike": false,
-     "cover": "https://http2.mlstatic.com/D_NQ_NP_909836-MCO28343216818_102018-O.webp",
-     "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ipsam facilis reiciendis modi?",
-     "id": "20"
     }
    ]

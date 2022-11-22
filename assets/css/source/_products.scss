@@ -42,7 +42,8 @@
         flex-wrap: wrap;
         justify-content: space-around;
         min-height: 250px;
-        overflow-x: hidden;
+        margin: 10px 0;
+        overflow: hidden;
         &--search{
             justify-content: flex-start;
             min-height: 650px;
@@ -73,6 +74,21 @@
                     .product__mark{
                         display: block;
                         transition: scale 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    }
+                }
+            }
+            &__controls{
+                background-color: $color-white;
+                padding: 5px;
+                border-radius: 15px;
+                position: absolute;
+                right: 8px;
+                top: 8px;
+                &-icon{
+                    width: 15px;
+                    margin: 0 5px;
+                    &:hover{
+                        cursor: pointer;
                     }
                 }
             }
@@ -116,6 +132,9 @@
             &-content{
                 padding: 10px;
                 cursor: pointer;
+                &--not{
+                    cursor: default;
+                }
                 &__price-before{
                     font-weight: 300;
                     font-size: .7rem;

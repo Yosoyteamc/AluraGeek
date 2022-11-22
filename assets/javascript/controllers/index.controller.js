@@ -59,20 +59,9 @@ clientServices.productList("LOCAL")
             }
         })
     })
-    setLike();
     touchProduct();
-
 })
 
-const setLike = () =>{
-    const hearts = document.querySelectorAll("[data-like]");
-    hearts.forEach((heart)=>{
-        heart.addEventListener("click",()=>{
-            // heart.classList.toggle("product__mark--like");
-            // heart.classList.toggle("scale-up-center");
-        });
-    })
-}
 
 const touchProduct = () =>{
     const products = document.querySelectorAll("[data-product]");

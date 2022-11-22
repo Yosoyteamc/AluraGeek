@@ -17,6 +17,10 @@ if(id === null){
 
 const product = await clientServices.detailProduct(id);
 
+if(typeof(product) !== "object"){
+    window.location.href = `./index.html`
+}
+
 thumbnails.forEach((thumbnail)=>{
     thumbnail.src = product.cover;
 })
@@ -73,20 +77,8 @@ clientServices.productList()
             count++;
         }
     })
-    setLike();
     touchProduct();
 })
-
-const setLike = () =>{
-    const hearts = document.querySelectorAll("[data-like]");
-    hearts.forEach((heart)=>{
-        heart.addEventListener("click",()=>{
-            //  heart.classList.toggle("product__mark--like");
-            //  heart.classList.toggle("scale-up-center");
-        });
-    })
-}
-
 
 heart.addEventListener("click",()=>{
         heart.classList.toggle("view-product-details__mark--like");

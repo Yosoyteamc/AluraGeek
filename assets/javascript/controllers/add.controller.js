@@ -15,6 +15,28 @@ const buttonAddProduct = document.getElementById("button-add");
 const lastcategory = document.getElementById("category");
 const lastdescription = document.getElementById("description");
 const form = document.querySelector("[data-form]");
+const url = new URL(window.location);
+const idProductToEdit = url.searchParams.get("id") || undefined;
+let productToUpdate;
+let update = false;
+
+if (idProductToEdit !== undefined) {
+    productToUpdate = await clientServices.detailProduct(idProductToEdit);
+    lastname.value = nameProduct.textContent = productToUpdate.name;
+    lastcover.value = coverProduct.src = productToUpdate.cover;
+    lastprice.value= (productToUpdate.descount.priceBefore).toString().replaceAll(".","").length === 0 ? productToUpdate.price : (productToUpdate.descount.priceBefore).toString().replaceAll(".","");
+    priceProduct.textContent = "$"+productToUpdate.price;
+    priceBefore.textContent = (productToUpdate.descount.priceBefore).toString().replaceAll(" ", "").length === 0? "$0": productToUpdate.descount.priceBefore;
+    lastdescount.value = (productToUpdate.descount.porcent).toString().replace("%","");
+    descountProduct.textContent = productToUpdate.descount.porcent+" OFF";
+    lastdescription.value = productToUpdate.description;
+    lastcategory.value = productToUpdate.category;
+
+    const title = document.querySelector(".add-product__title");
+    title.textContent = "Información del producto a actualizar:";
+    buttonAddProduct.value = "Actualizar"
+    update = true;
+}
 
 Validateservice.validateInput(lastname);
 Validateservice.validateInput(lastcover);
@@ -74,14 +96,27 @@ const createObjectProduct = () =>{
     product.cover = lastcover.value;
     product.belike = false;
     product.description = lastdescription.value;
-    //console.log(product);
     return product;
+}
+
+const previewReset = () => {
+    nameProduct.textContent = 'Nombre De Producto';
+    coverProduct.src = './assets/images/preview.jpg';
+    priceProduct.textContent = '$99.999';
+    lastdescount.textContent = "0% OFF";
+    priceBefore.textContent = "$0";
 }
 
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
-    clientServices.createProduct(createObjectProduct());
-    form.reset();
+    if(update){
+        clientServices.updateProduct(Object.assign({}, createObjectProduct(), {id: productToUpdate.id}),productToUpdate.id);
+    }
+    else{
+        clientServices.createProduct(createObjectProduct());
+        form.reset();
+        previewReset();
+    }
 })
 
 const formSearch = document.querySelector("#form-search"); 

@@ -1,6 +1,6 @@
 import dataJSON from "../../../server/db.json" assert {type:"json"}
 import { Product } from "../models/product.class.js";
-import { createAlert } from "./alerts-service.js";
+import { createAlert, createAlertToDelete } from "./alerts-service.js";
 let data; 
 const URL_USER = "https://636079be67d3b7a0a6af7b39.mockapi.io/api/v1/users";
 const URL_ACCESS = "https://636079be67d3b7a0a6af7b39.mockapi.io/api/v1/users/1/Access"
@@ -12,7 +12,7 @@ const authUSER = async (email,pass) =>{
     try {
         data = await fetch(URL_USER + `?email=${email}`).then( response => response.json()).then( responseJSON => responseJSON);
         if(data[0].password === pass){
-            const access = {userId: data[0].id, datatime: (new Date()).toLocaleString()}
+            const access = {userId: data[0].id, name: data[0].name, datatime: (new Date()).toLocaleString()}
             await fetch(URL_ACCESS,{
                 method: "POST",
                 headers:{
@@ -67,6 +67,31 @@ const createProduct = async(product = new Product()) => {
     }
   }
 
+const updateProduct = async(product = new Product(),id) => {
+    try {
+        await fetch(URL_PRODUCTS+`/${id}`,{
+            method: "PUT",
+            headers:{
+              "content-Type": "application/json"
+            },
+            body: JSON.stringify(product)
+        }).then( response => { 
+            createAlert('SUCCESS',`${product.name} ha sido actualizado correctamente.`)
+            createAlert("NORMAL","Se redireccionará la pagina a la vista anterior en breve.")
+        setTimeout(()=>{
+            history.back();
+        },5000)})
+    } catch (error) {
+        createAlert('ERROR','Error al intentar conectarse al servidor');
+        data = JSON.parse(localStorage.getItem("db-products")) || dataJSON;
+        const index = data.findIndex(item => item.id === id);
+        data[index] = product;
+        localStorage.setItem("db-products", JSON.stringify(data));
+        createAlert('SUCCESS','Producto actualizado localmente')
+        return; 
+    }
+}
+
 const detailProduct = async(id) =>{
     try {
         data = await fetch(URL_PRODUCTS+`/${id}`)
@@ -119,7 +144,28 @@ const likedProduct = (id) =>{
     return result;
 }
 
+let productToDelete = null;
+const deletingProduct = async(id) =>{
+    productToDelete = await detailProduct(id)
+    createAlertToDelete(productToDelete.name)
+}
+
+const deleteProduct = async() =>{
+    try {
+        data = await fetch(URL_PRODUCTS+`/${productToDelete.id}`,{method: 'DELETE'})
+        .then(response => response.json()).finally(
+            createAlert('SUCCESS',`${productToDelete.name} ha sido eliminado correctamente.`),
+            createAlert("NORMAL","Se actualizará la pagina en breve."))
+        setTimeout(()=>{
+            location.reload();
+        },4000)
+    } catch (error) {
+        createAlert('ERROR','No podemos conectar con el servidor, intentelo de nuevo luego');
+    }
+}
+
 
 export const clientServices = {
-    productList, createProduct, authUSER, detailProduct, controLikeProductLocal, likedProduct,
+    productList, createProduct, authUSER, detailProduct, controLikeProductLocal, likedProduct, 
+    deletingProduct, deleteProduct, updateProduct,
 }
